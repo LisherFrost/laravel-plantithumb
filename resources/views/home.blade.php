@@ -17,6 +17,9 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
+            <style>
+              @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap');
+            </style>
             <ul class="navbar-nav">
               {{-- <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#">Home</a>
@@ -25,7 +28,7 @@
                 <a class="nav-link nav-labels-text" href="#">About Us</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link nav-labels-text" href="#">Help</a>
+                <a class="nav-link nav-labels-text" href="#">Message Us</a>
               </li>
             </ul>
 
@@ -33,12 +36,96 @@
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                 {{-- <button class="btn search-logo" type="submit"><img src="https://i.ibb.co/CtcCGJD/image.png" alt="image" border="0"></button> --}}
             </form>
+
+            <box-icon name='cart' style = "margin-left: 10px; font-size: 27px;"></box-icon>
+            <box-icon name='user-circle' style = "margin-left: 20px; font-size: 27px;"></box-icon>
           </div>
         </div>
       </nav>
 
+      <br><br>
+
+      <!-- home -->
+      <center>
+      <div class="row align-items-start" style="width: 40rem;">
+        <div class="card col" style = "margin-right: 20px;">
+          <img src="https://i.ibb.co/80Y90SW/image.png" class="card-img-top" alt="...">
+        
+        </div>
+
+        <br>
+
+        <div class="card col" style = "margin-right: 20px;">
+          <img src="https://i.ibb.co/80Y90SW/image.png" class="card-img-top" alt="...">
+
+        </div>
+
+        <br>
+        
+        <div class="card col" style = "margin-right: 20px;">
+          <img src="https://i.ibb.co/80Y90SW/image.png" class="card-img-top" alt="...">
+
+        </div>
+
+        <br>
+        
+        <div class="card col" style = "margin-right: 20px;">
+          <img src="https://i.ibb.co/80Y90SW/image.png" class="card-img-top" alt="...">
+
+        </div>
+      </div>
+
+      </center>
+
+      <section class="section">
+        <div class="text_title">Categories</div>
+        <br>
+      </section>
+
+
+      <br><br><br>
+
+      <!-- featured item -->
+      <center>
+      <div class="card" style="width: 50%;">
+        <img src="https://i.ibb.co/80Y90SW/image.png" class="card-img-top" alt="..." style = "height: 400px;">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+      </center>
+
+
+      <!-- other cards -->
+      <center>
+        <div class="row align-items-start" style="width: 40rem; margin-top: 50px;">
+          <div class="card col" style = "margin-right: 20px;">
+            <img src="https://i.ibb.co/80Y90SW/image.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+
+          <br>
+
+          <div class="card col" style = "margin-right: 20px;">
+            <img src="https://i.ibb.co/80Y90SW/image.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+      </center>
+
 
     <!-- javascript -->
     <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+    <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script> <!-- boxicons -->
 </body>
 </html>
