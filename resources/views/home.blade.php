@@ -8,6 +8,7 @@
     <link rel="stylesheet" href={{ asset('css/bootstrap.css') }}>
     <link rel="stylesheet" href={{ URL::asset('css/home.css'); }} >
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet"> <!-- google fonts -->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'> <!-- boxicons -->
 </head>
 <body>
     <header class="navbar navbar-expand-lg navbar-light bg-light">
@@ -40,8 +41,10 @@
             {{-- <box-icon name='cart' style = "margin-left: 10px; font-size: 27px;"></box-icon>
             <box-icon name='user-circle' style = "margin-left: 20px; font-size: 27px;"></box-icon> --}}
 
-            <box-icon name='cart' class = "ms-3"></box-icon>
-            <box-icon name='user-circle' class = "ms-3"></box-icon>
+            {{-- <box-icon name='cart' class = "ms-3" data-bs-toggle="tooltip" data-bs-placement="bottom" title="My Cart">My Cart</box-icon> <!-- cart --> --}}
+            <a class = "" href = "#"><i class='bx bx-cart bx-md ms-4 mt-2 icons' data-bs-toggle="tooltip" data-bs-placement="bottom" title="My Cart"></i></a>
+            <a class = "" href = "#"><i class='bx bx-user-circle bx-md ms-4 mt-2 icons' data-bs-toggle="tooltip" data-bs-placement="bottom" title="My Profile"></i></a>
+            {{-- <box-icon name='user-circle' class = "ms-3" data-bs-toggle="tooltip" data-bs-placement="bottom" title="My Profile">My Profile</box-icon> <!-- my profile --> --}}
 
           </div>
         </div>
@@ -134,7 +137,7 @@
 
                 <h5 class="card-title">Seller:</h5>
                 <p class="card-text px-4">
-                  mama mo
+                  lyn
                   <box-icon name='message-rounded-dots'></box-icon>
                 </p>
 
