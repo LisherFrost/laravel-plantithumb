@@ -14,9 +14,21 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('login');
 });
 
 Route::get('/admin', function () {
-    return view('welcome');
+    return view('home');
+});
+
+Route::get('/activity', function () {
+    return view('activity');
+});
+
+Route::get('/profile', function () {
+    return view('profile');
+});
+    
+Route::get('/sales_history', function () {
+    return view('sales_history');
 });
