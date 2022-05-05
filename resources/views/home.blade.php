@@ -1,3 +1,18 @@
+<!-- 
+  TODO: (Seller view)
+  - box sa icons
+  - add/edit product
+  - profile/edit profile
+  -
+
+  
+  TODO: (Customer view) -- melmark
+  - profile page
+  - edit profile page
+  - purchase history
+-->
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +27,7 @@
 </head>
 <body>
     <header class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid nav-home">
+        <div class="container-fluid nav-home shadow-lg">
           <a class="navbar-brand nav-labels"><img src="https://i.ibb.co/jHR2kPZ/plantithumb-revised1-web-nobackg.png" alt="plantithumb-revised1-web-nobackg" class = "plant-logo" border="0"></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -35,14 +50,23 @@
                 {{-- <button class="btn search-logo" type="submit"><img src="https://i.ibb.co/CtcCGJD/image.png" alt="image" border="0"></button> --}}
             </form>
 
-            {{-- <box-icon name='cart' style = "margin-left: 10px; font-size: 27px;"></box-icon>
-            <box-icon name='user-circle' style = "margin-left: 20px; font-size: 27px;"></box-icon> --}}
+  
+
 
             <!-- icons -->
+            <span class="border-success border-3 mx-2 mt-4 rounded icons_buttons">
+            <a href = "#"><i class='bx bx-line-chart bx-md px-1 icons' data-bs-toggle="tooltip" data-bs-placement="bottom" title="Sales History"></i></a>
+            </span>
 
-            <a class = "" href = "#"><i class='bx bx-line-chart bx-md ms-4 mt-2 icons' data-bs-toggle="tooltip" data-bs-placement="bottom" title="Sales History"></i></a>
-            <a class = "" href = "#"><i class='bx bx-user-circle bx-md ms-4 mt-2 icons' data-bs-toggle="tooltip" data-bs-placement="bottom" title="My Profile"></i></a>
-            <a class = "" href = "#"><i class='bx bx-log-out bx-md ms-4 mt-2 icons' data-bs-toggle="tooltip" data-bs-placement="bottom" title="Log-Out"></i></a>
+            <span class="border-success border-3 mx-2 mt-4 rounded icons_buttons">
+            <a href = "#"><i class='bx bx-user-circle bx-md px-1 icons' data-bs-toggle="tooltip" data-bs-placement="bottom" title="My Profile"></i></a>
+            </span>
+
+            
+            <span class="border-success border-3 mx-2 mt-4 rounded icons_buttons">
+            <a href = "#"><i class='bx bx-log-out bx-md px-1 icons' data-bs-toggle="tooltip" data-bs-placement="bottom" title="Log-Out"></i></a>
+            </span>
+            
 
 
 
@@ -98,7 +122,7 @@
         <div class="row align-items-start">
           <!-- col 1 -->
           <div class = "col">
-            <div class="card" style="width: 90%;">
+            <div class="card" style="width: 100%;">
               <img src="https://i.ibb.co/80Y90SW/image.png" id = "myImg" class="card-img-top" alt="..." style = "height: 400px;">
               <div class="card-body">
                 <h5 class="card-title">Card title</h5>
@@ -173,7 +197,83 @@
 
           <!-- col 2 -->
           <div class = "col">
-            <div class="card" style="width: 90%;">
+            <div class="card" style="width: 100%;">
+              <img src="https://i.ibb.co/80Y90SW/image.png" id = "myImg2" class="card-img-top" alt="..." style = "height: 400px;">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            
+                <!-- The Modal -->
+                <div id="myModal" class="modal">
+                  <span class="close">&times;</span>
+                  {{-- <img class="modal-content" id="img01"> --}}
+
+                  <!-- details -->
+                  <div class="card" style="width: 35rem;">
+                    <img src="https://i.ibb.co/80Y90SW/image.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <div class="container">
+                        <div class="row align-items-start">
+                          <div class = "col">
+                            <h5 class="card-title">Plant:</h5>
+                            <p class="card-text">plant name</p>
+                            <h5 class="card-title">Type:</h5>
+                            <p class="card-text">smol</p>
+                            <h5 class="card-title">Location:</h5>
+                            <p class="card-text">Old Cabalan</p>
+                          </div>
+
+                          <div class = "col">
+                          <h5 class="card-title">Price:</h5>
+                          <p class="card-text">P1500</p>
+                          <h5 class="card-title">Stock:</h5>
+                          <p class="card-text">69</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <br>
+
+                      <h5 class="card-title">Description:</h5>
+                      <p class="card-text px-4">werwerwerewrewrwerwerrewrewrewrewrwewerrwerwerwe</p>
+
+                      <h5 class="card-title">Seller:</h5>
+                      <p class="card-text px-4">lyn</p>
+
+                      <br>
+
+                      <!-- button -->
+                      <div class="container">
+                        <div class="row align-items-start">
+                          <!-- col 1 -->
+                          <div class = "col" style = "margin-left: 15%;">
+                            <a href="#" class="btn btn-primary mx-4" style = "width: 100%;">Add to Cart</a>
+                          </div>
+                          <!-- col 2 -->
+                          <div class = "col" style = "margin-left: -15%;">
+                            <i class='btn btn-primary mx-4 bx bx-chat bx-sm' style = "min-width: 10%; background-color:rgb(64, 173, 64)"></i>
+                          </div>
+                        </div>
+                      </div>
+
+                      <br><br>
+
+                  </div>
+                </div>
+      
+
+
+                <div id="caption2"></div>
+              </div>
+            </div>
+          </div>
+
+
+
+          <!-- col 3 -->
+          <div class = "col">
+            <div class="card" style="width: 100%;">
               <img src="https://i.ibb.co/80Y90SW/image.png" id = "myImg2" class="card-img-top" alt="..." style = "height: 400px;">
               <div class="card-body">
                 <h5 class="card-title">Card title</h5>

@@ -6514,7 +6514,8 @@ textarea.form-control-lg {
 }
 
 .border-success {
-  border-color: #198754 !important;
+  /* border-color: #198754 !important; */
+  border-color: #44c544 !important;
 }
 
 .border-info {

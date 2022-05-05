@@ -178,3 +178,13 @@ body
   {
     color: rgb(133, 114, 114);
   }
+
+  .icons_buttons
+  {
+    background-color: #44c544;
+  }
+
+  .icons_buttons:hover
+  {
+    background-color: #66e066;
+  }
