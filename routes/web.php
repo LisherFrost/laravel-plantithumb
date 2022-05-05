@@ -32,3 +32,12 @@ Route::get('/profile', function () {
 Route::get('/sales_history', function () {
     return view('sales_history');
 });
+
+// input folder under 'views'
+Route::get('/edit_product', function () {
+    return view('input/edit_product');
+});
+
+Route::get('/edit_profile', function () {
+    return view('input/edit_profile');
+});

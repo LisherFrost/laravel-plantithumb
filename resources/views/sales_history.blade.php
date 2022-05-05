@@ -40,16 +40,16 @@
 
 
             <!-- icons -->
-            <span class="border border-success border-3 mx-2 mt-4 rounded icons_buttons">
+            <span class="border border-secondary border-3 mx-2 mt-4 rounded icons_buttons">
               <a href = "{{ url('sales_history')}}"><i class='bx bx-line-chart bx-md px-1 icons' data-bs-toggle="tooltip" data-bs-placement="bottom" title="Sales History"></i></a>
             </span>
 
-            <span class="border border-success border-3 mx-2 mt-4 rounded icons_buttons">
+            <span class="border border-secondary border-3 mx-2 mt-4 rounded icons_buttons">
               <a href = "{{ url('profile')}}"><i class='bx bx-user-circle bx-md px-1 icons' data-bs-toggle="tooltip" data-bs-placement="bottom" title="My Profile"></i></a>
             </span>
 
             
-            <span class="border border-success border-3 mx-2 mt-4 rounded icons_buttons">
+            <span class="border border-secondary border-3 mx-2 mt-4 rounded icons_buttons">
               <a href = "{{ url('')}}"><i class='bx bx-log-out bx-md px-1 icons' data-bs-toggle="tooltip" data-bs-placement="bottom" title="Log-Out"></i></a>
             </span>
             

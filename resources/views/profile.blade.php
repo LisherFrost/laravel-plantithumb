@@ -41,16 +41,16 @@
 
 
             <!-- icons -->
-            <span class="border border-success border-3 mx-2 mt-4 rounded icons_buttons">
+            <span class="border border-secondary border-3 mx-2 mt-4 rounded icons_buttons">
               <a href = "{{ url('sales_history')}}"><i class='bx bx-line-chart bx-md px-1 icons' data-bs-toggle="tooltip" data-bs-placement="bottom" title="Sales History"></i></a>
             </span>
 
-            <span class="border border-success border-3 mx-2 mt-4 rounded icons_buttons">
+            <span class="border border-secondary border-3 mx-2 mt-4 rounded icons_buttons">
               <a href = "{{ url('profile')}}"><i class='bx bx-user-circle bx-md px-1 icons' data-bs-toggle="tooltip" data-bs-placement="bottom" title="My Profile"></i></a>
             </span>
 
             
-            <span class="border border-success border-3 mx-2 mt-4 rounded icons_buttons">
+            <span class="border border-secondary border-3 mx-2 mt-4 rounded icons_buttons">
               <a href = "{{ url('')}}"><i class='bx bx-log-out bx-md px-1 icons' data-bs-toggle="tooltip" data-bs-placement="bottom" title="Log-Out"></i></a>
             </span>
             
@@ -81,43 +81,10 @@
                     <a href = "#" class = "btn btn-primary btn-warning">Message</a> --}}
 
                     <br><br><br>
-                    <a href="#" class="btn btn-primary btn-success stretched-link" id = "myProfile">Edit Profile</a>
+                    <a href = "{{ url('/edit_profile')}}" class="btn btn-primary btn-success stretched-link" id = "myProfile">Edit Profile</a>
 
 
-                    <!-- The Modal -->
-                    <div id="myModal" class="modal">
-                        <span class="close">&times;</span>
-                        {{-- <img class="modal-content" id="img01"> --}}
-    
-                        <!-- details -->
-                        <div class="card" style="width: 35rem;">
-                            <form>
-                                <div class="mb-3">
-                                    
-
-                                </div>
-
-                                <div class="mb-3">
-                                <label for="exampleInputEmail1" class="form-label mt-3">Name</label>
-                                <input type="name" class="form-control" id="exampleInputName1" style = "width: 70%;">
-                                </div>
-
-                                <div class="mb-3">
-                                <label for="exampleInputPassword1" class="form-label">Location</label>
-                                <input type="name" class="form-control" id="exampleInputLocation1" style = "width: 70%;">
-                                </div>
-
-                                {{-- <div class="mb-3 form-check">
-                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                                </div> --}}
-
-
-                                <button type="submit" class="btn btn-primary mt-4 mb-3">Submit</button>
-                            </form>
-    
-                        </div>
-                    </div>
+                
 
 
 
@@ -130,7 +97,7 @@
 
 
     <!-- modal -->
-    <script>
+    {{-- <script>
         // Get the modal
         var modal = document.getElementById("myModal");
         
@@ -152,7 +119,7 @@
         span.onclick = function() { 
           modal.style.display = "none";
         }
-    </script>
+    </script> --}}
 
 </body>
 </html>

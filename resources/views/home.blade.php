@@ -54,16 +54,16 @@
 
 
             <!-- icons -->
-            <span class="border border-success border-3 mx-2 mt-4 rounded icons_buttons">
+            <span class="border border-secondary border-3 mx-2 mt-4 rounded icons_buttons">
               <a href = "{{ url('sales_history')}}"><i class='bx bx-line-chart bx-md px-1 icons' data-bs-toggle="tooltip" data-bs-placement="bottom" title="Sales History"></i></a>
             </span>
 
-            <span class="border border-success border-3 mx-2 mt-4 rounded icons_buttons">
+            <span class="border border-secondary border-3 mx-2 mt-4 rounded icons_buttons">
               <a href = "{{ url('profile')}}"><i class='bx bx-user-circle bx-md px-1 icons' data-bs-toggle="tooltip" data-bs-placement="bottom" title="My Profile"></i></a>
             </span>
 
             
-            <span class="border border-success border-3 mx-2 mt-4 rounded icons_buttons">
+            <span class="border border-secondary border-3 mx-2 mt-4 rounded icons_buttons">
               <a href = "{{ url('')}}"><i class='bx bx-log-out bx-md px-1 icons' data-bs-toggle="tooltip" data-bs-placement="bottom" title="Log-Out"></i></a>
             </span>
             
@@ -123,69 +123,12 @@
           <!-- col 1 -->
           <div class = "col">
             <div class="card" style="width: 100%;">
-              <img src="https://i.ibb.co/80Y90SW/image.png" id = "myImg" class="card-img-top" alt="..." style = "height: 400px;">
+              <a href = "{{ url('/edit_product')}}"><img src="https://i.ibb.co/80Y90SW/image.png" id = "myImg" class="card-img-top" alt="..." style = "height: 400px;"></a>
               <div class="card-body">
                 <h5 class="card-title">Card title</h5>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
             
-                <!-- The Modal -->
-                <div id="myModal" class="modal">
-                  <span class="close">&times;</span>
-                  {{-- <img class="modal-content" id="img01"> --}}
-
-                  <!-- details -->
-                  <div class="card" style="width: 35rem;">
-                    <img src="https://i.ibb.co/80Y90SW/image.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <div class="container">
-                        <div class="row align-items-start">
-                          <div class = "col">
-                            <h5 class="card-title">Plant:</h5>
-                            <p class="card-text">plant name</p>
-                            <h5 class="card-title">Type:</h5>
-                            <p class="card-text">smol</p>
-                            <h5 class="card-title">Location:</h5>
-                            <p class="card-text">Old Cabalan</p>
-                          </div>
-
-                          <div class = "col">
-                          <h5 class="card-title">Price:</h5>
-                          <p class="card-text">P1500</p>
-                          <h5 class="card-title">Stock:</h5>
-                          <p class="card-text">69</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <br>
-
-                      <h5 class="card-title">Description:</h5>
-                      <p class="card-text px-4">werwerwerewrewrwerwerrewrewrewrewrwewerrwerwerwe</p>
-
-                      <h5 class="card-title">Seller:</h5>
-                      <p class="card-text px-4">lyn</p>
-
-                      <br>
-
-                      <!-- button -->
-                      <div class="container">
-                        <div class="row align-items-start">
-                          <!-- col 1 -->
-                          <div class = "col" style = "margin-left: 15%;">
-                            <a href="#" class="btn btn-primary mx-4" style = "width: 100%;">Add to Cart</a>
-                          </div>
-                          <!-- col 2 -->
-                          <div class = "col" style = "margin-left: -15%;">
-                            <i class='btn btn-primary mx-4 bx bx-chat bx-sm' style = "min-width: 10%; background-color:rgb(64, 173, 64)"></i>
-                          </div>
-                        </div>
-                      </div>
-
-                      <br><br>
-
-                  </div>
-                </div>
+                <!-- modal .txt file to be posted here in case gustong ibalik -->
       
 
 
@@ -203,64 +146,7 @@
                 <h5 class="card-title">Card title</h5>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
             
-                <!-- The Modal -->
-                <div id="myModal" class="modal">
-                  <span class="close">&times;</span>
-                  {{-- <img class="modal-content" id="img01"> --}}
-
-                  <!-- details -->
-                  <div class="card" style="width: 35rem;">
-                    <img src="https://i.ibb.co/80Y90SW/image.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <div class="container">
-                        <div class="row align-items-start">
-                          <div class = "col">
-                            <h5 class="card-title">Plant:</h5>
-                            <p class="card-text">plant name</p>
-                            <h5 class="card-title">Type:</h5>
-                            <p class="card-text">smol</p>
-                            <h5 class="card-title">Location:</h5>
-                            <p class="card-text">Old Cabalan</p>
-                          </div>
-
-                          <div class = "col">
-                          <h5 class="card-title">Price:</h5>
-                          <p class="card-text">P1500</p>
-                          <h5 class="card-title">Stock:</h5>
-                          <p class="card-text">69</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <br>
-
-                      <h5 class="card-title">Description:</h5>
-                      <p class="card-text px-4">werwerwerewrewrwerwerrewrewrewrewrwewerrwerwerwe</p>
-
-                      <h5 class="card-title">Seller:</h5>
-                      <p class="card-text px-4">lyn</p>
-
-                      <br>
-
-                      <!-- button -->
-                      <div class="container">
-                        <div class="row align-items-start">
-                          <!-- col 1 -->
-                          <div class = "col" style = "margin-left: 15%;">
-                            <a href="#" class="btn btn-primary mx-4" style = "width: 100%;">Add to Cart</a>
-                          </div>
-                          <!-- col 2 -->
-                          <div class = "col" style = "margin-left: -15%;">
-                            <i class='btn btn-primary mx-4 bx bx-chat bx-sm' style = "min-width: 10%; background-color:rgb(64, 173, 64)"></i>
-                          </div>
-                        </div>
-                      </div>
-
-                      <br><br>
-
-                  </div>
-                </div>
+                <!-- modal .txt file to be posted here in case gustong ibalik -->
       
 
 
@@ -279,64 +165,7 @@
                 <h5 class="card-title">Card title</h5>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
             
-                <!-- The Modal -->
-                <div id="myModal" class="modal">
-                  <span class="close">&times;</span>
-                  {{-- <img class="modal-content" id="img01"> --}}
-
-                  <!-- details -->
-                  <div class="card" style="width: 35rem;">
-                    <img src="https://i.ibb.co/80Y90SW/image.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <div class="container">
-                        <div class="row align-items-start">
-                          <div class = "col">
-                            <h5 class="card-title">Plant:</h5>
-                            <p class="card-text">plant name</p>
-                            <h5 class="card-title">Type:</h5>
-                            <p class="card-text">smol</p>
-                            <h5 class="card-title">Location:</h5>
-                            <p class="card-text">Old Cabalan</p>
-                          </div>
-
-                          <div class = "col">
-                          <h5 class="card-title">Price:</h5>
-                          <p class="card-text">P1500</p>
-                          <h5 class="card-title">Stock:</h5>
-                          <p class="card-text">69</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <br>
-
-                      <h5 class="card-title">Description:</h5>
-                      <p class="card-text px-4">werwerwerewrewrwerwerrewrewrewrewrwewerrwerwerwe</p>
-
-                      <h5 class="card-title">Seller:</h5>
-                      <p class="card-text px-4">lyn</p>
-
-                      <br>
-
-                      <!-- button -->
-                      <div class="container">
-                        <div class="row align-items-start">
-                          <!-- col 1 -->
-                          <div class = "col" style = "margin-left: 15%;">
-                            <a href="#" class="btn btn-primary mx-4" style = "width: 100%;">Add to Cart</a>
-                          </div>
-                          <!-- col 2 -->
-                          <div class = "col" style = "margin-left: -15%;">
-                            <i class='btn btn-primary mx-4 bx bx-chat bx-sm' style = "min-width: 10%; background-color:rgb(64, 173, 64)"></i>
-                          </div>
-                        </div>
-                      </div>
-
-                      <br><br>
-
-                  </div>
-                </div>
+                <!-- modal .txt file to be posted here in case gustong ibalik -->
       
 
 
@@ -347,234 +176,7 @@
 
 
         <!-- another horizontal set of items -->
-        <div class="container">
-        <div class="row align-items-start mt-5">
-          <!-- col 1 -->
-          <div class = "col">
-            <div class="card" style="width: 100%;">
-              <img src="https://i.ibb.co/80Y90SW/image.png" id = "myImg" class="card-img-top" alt="..." style = "height: 400px;">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            
-                <!-- The Modal -->
-                <div id="myModal" class="modal">
-                  <span class="close">&times;</span>
-                  {{-- <img class="modal-content" id="img01"> --}}
-
-                  <!-- details -->
-                  <div class="card" style="width: 35rem;">
-                    <img src="https://i.ibb.co/80Y90SW/image.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <div class="container">
-                        <div class="row align-items-start">
-                          <div class = "col">
-                            <h5 class="card-title">Plant:</h5>
-                            <p class="card-text">plant name</p>
-                            <h5 class="card-title">Type:</h5>
-                            <p class="card-text">smol</p>
-                            <h5 class="card-title">Location:</h5>
-                            <p class="card-text">Old Cabalan</p>
-                          </div>
-
-                          <div class = "col">
-                          <h5 class="card-title">Price:</h5>
-                          <p class="card-text">P1500</p>
-                          <h5 class="card-title">Stock:</h5>
-                          <p class="card-text">69</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <br>
-
-                      <h5 class="card-title">Description:</h5>
-                      <p class="card-text px-4">werwerwerewrewrwerwerrewrewrewrewrwewerrwerwerwe</p>
-
-                      <h5 class="card-title">Seller:</h5>
-                      <p class="card-text px-4">lyn</p>
-
-                      <br>
-
-                      <!-- button -->
-                      <div class="container">
-                        <div class="row align-items-start">
-                          <!-- col 1 -->
-                          <div class = "col" style = "margin-left: 15%;">
-                            <a href="#" class="btn btn-primary mx-4" style = "width: 100%;">Add to Cart</a>
-                          </div>
-                          <!-- col 2 -->
-                          <div class = "col" style = "margin-left: -15%;">
-                            <i class='btn btn-primary mx-4 bx bx-chat bx-sm' style = "min-width: 10%; background-color:rgb(64, 173, 64)"></i>
-                          </div>
-                        </div>
-                      </div>
-
-                      <br><br>
-
-                  </div>
-                </div>
-      
-
-
-                <div id="caption"></div>
-              </div>
-            </div>
-          </div>
-
-
-          <!-- col 2 -->
-          <div class = "col">
-            <div class="card" style="width: 100%;">
-              <img src="https://i.ibb.co/80Y90SW/image.png" id = "myImg2" class="card-img-top" alt="..." style = "height: 400px;">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            
-                <!-- The Modal -->
-                <div id="myModal" class="modal">
-                  <span class="close">&times;</span>
-                  {{-- <img class="modal-content" id="img01"> --}}
-
-                  <!-- details -->
-                  <div class="card" style="width: 35rem;">
-                    <img src="https://i.ibb.co/80Y90SW/image.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <div class="container">
-                        <div class="row align-items-start">
-                          <div class = "col">
-                            <h5 class="card-title">Plant:</h5>
-                            <p class="card-text">plant name</p>
-                            <h5 class="card-title">Type:</h5>
-                            <p class="card-text">smol</p>
-                            <h5 class="card-title">Location:</h5>
-                            <p class="card-text">Old Cabalan</p>
-                          </div>
-
-                          <div class = "col">
-                          <h5 class="card-title">Price:</h5>
-                          <p class="card-text">P1500</p>
-                          <h5 class="card-title">Stock:</h5>
-                          <p class="card-text">69</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <br>
-
-                      <h5 class="card-title">Description:</h5>
-                      <p class="card-text px-4">werwerwerewrewrwerwerrewrewrewrewrwewerrwerwerwe</p>
-
-                      <h5 class="card-title">Seller:</h5>
-                      <p class="card-text px-4">lyn</p>
-
-                      <br>
-
-                      <!-- button -->
-                      <div class="container">
-                        <div class="row align-items-start">
-                          <!-- col 1 -->
-                          <div class = "col" style = "margin-left: 15%;">
-                            <a href="#" class="btn btn-primary mx-4" style = "width: 100%;">Add to Cart</a>
-                          </div>
-                          <!-- col 2 -->
-                          <div class = "col" style = "margin-left: -15%;">
-                            <i class='btn btn-primary mx-4 bx bx-chat bx-sm' style = "min-width: 10%; background-color:rgb(64, 173, 64)"></i>
-                          </div>
-                        </div>
-                      </div>
-
-                      <br><br>
-
-                  </div>
-                </div>
-      
-
-
-                <div id="caption2"></div>
-              </div>
-            </div>
-          </div>
-
-
-
-          <!-- col 3 -->
-          <div class = "col">
-            <div class="card" style="width: 100%;">
-              <img src="https://i.ibb.co/80Y90SW/image.png" id = "myImg2" class="card-img-top" alt="..." style = "height: 400px;">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            
-                <!-- The Modal -->
-                <div id="myModal" class="modal">
-                  <span class="close">&times;</span>
-                  {{-- <img class="modal-content" id="img01"> --}}
-
-                  <!-- details -->
-                  <div class="card" style="width: 35rem;">
-                    <img src="https://i.ibb.co/80Y90SW/image.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <div class="container">
-                        <div class="row align-items-start">
-                          <div class = "col">
-                            <h5 class="card-title">Plant:</h5>
-                            <p class="card-text">plant name</p>
-                            <h5 class="card-title">Type:</h5>
-                            <p class="card-text">smol</p>
-                            <h5 class="card-title">Location:</h5>
-                            <p class="card-text">Old Cabalan</p>
-                          </div>
-
-                          <div class = "col">
-                          <h5 class="card-title">Price:</h5>
-                          <p class="card-text">P1500</p>
-                          <h5 class="card-title">Stock:</h5>
-                          <p class="card-text">69</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <br>
-
-                      <h5 class="card-title">Description:</h5>
-                      <p class="card-text px-4">werwerwerewrewrwerwerrewrewrewrewrwewerrwerwerwe</p>
-
-                      <h5 class="card-title">Seller:</h5>
-                      <p class="card-text px-4">lyn</p>
-
-                      <br>
-
-                      <!-- button -->
-                      <div class="container">
-                        <div class="row align-items-start">
-                          <!-- col 1 -->
-                          <div class = "col" style = "margin-left: 15%;">
-                            <a href="#" class="btn btn-primary mx-4" style = "width: 100%;">Add to Cart</a>
-                          </div>
-                          <!-- col 2 -->
-                          <div class = "col" style = "margin-left: -15%;">
-                            <i class='btn btn-primary mx-4 bx bx-chat bx-sm' style = "min-width: 10%; background-color:rgb(64, 173, 64)"></i>
-                          </div>
-                        </div>
-                      </div>
-
-                      <br><br>
-
-                  </div>
-                </div>
-      
-
-
-                <div id="caption2"></div>
-              </div>
-            </div>
-          </div>
-
-
+        <!-- pending copy paste -->
 
 
 
@@ -592,7 +194,7 @@
 
 
     <!-- modal -->
-    <script>
+    {{-- <script>
       // Get the modal
       var modal = document.getElementById("myModal");
       
@@ -623,6 +225,6 @@
       span.onclick = function() { 
         modal.style.display = "none";
       }
-  </script>
+  </script> --}}
 </body>
 </html>
