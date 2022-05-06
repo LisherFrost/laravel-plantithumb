@@ -11,12 +11,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet"> <!-- google fonts -->
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'> <!-- boxicons -->
   
+    <link rel="stylesheet" href={{ asset('css/bootstrap.css') }}>
+    <link rel="stylesheet" href={{ URL::asset('css/home.css'); }} >
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet"> <!-- google fonts -->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'> <!-- boxicons -->
+  <link rel="stylesheet" href={{ asset('css/bootstrap.css') }}>
+  <link rel="stylesheet" href={{ URL::asset('css/messages.css'); }} >
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet"> <!-- google fonts -->
+  <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'> <!-- boxicons -->
 </head>
 <body>
   <!-- navbar -->
-  <header class="navbar navbar-expand-lg navbar-light bg-light">
+  <header class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
         <div class="container-fluid nav-home shadow-lg">
-          <a href = "{{ url('/admin')}}" class="navbar-brand nav-labels"><img src="https://i.ibb.co/jHR2kPZ/plantithumb-revised1-web-nobackg.png" alt="plantithumb-revised1-web-nobackg" class = "plant-logo" border="0"></a>
+          <a href = "{{ url('/admin')}}" class="navbar-brand nav-labels"><img src="https://i.ibb.co/gvrdcqf/279907607-397731735539573-6502971206019149935-n.gif" class = "plant-logo" border="0"></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
