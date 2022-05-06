@@ -41,3 +41,5 @@ Route::get('/edit_product', function () {
 Route::get('/edit_profile', function () {
     return view('input/edit_profile');
 });
+    return view('messages');
+});

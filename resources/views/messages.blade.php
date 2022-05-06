@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>PlantiThumb | Sales History</title>
-    <link rel="icon" type="url" href="https://i.ibb.co/gvrdcqf/279907607-397731735539573-6502971206019149935-n.gif">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PlantiThumb | Messages</title>
+  <link rel="icon" type="url" href="https://i.ibb.co/gvrdcqf/279907607-397731735539573-6502971206019149935-n.gif">
     <link rel="stylesheet" href={{ asset('css/bootstrap.css') }}>
-    <link rel="stylesheet" href={{ URL::asset('css/sales_history.css'); }} >
+    <link rel="stylesheet" href={{ URL::asset('css/profile.css'); }} >
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet"> <!-- google fonts -->
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'> <!-- boxicons -->
+  
 </head>
 <body>
-    <!-- navbar -->
-    <header class="navbar navbar-expand-lg navbar-light bg-light">
+  <!-- navbar -->
+  <header class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid nav-home shadow-lg">
           <a href = "{{ url('/admin')}}" class="navbar-brand nav-labels"><img src="https://i.ibb.co/jHR2kPZ/plantithumb-revised1-web-nobackg.png" alt="plantithumb-revised1-web-nobackg" class = "plant-logo" border="0"></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -60,13 +61,5 @@
           </div>
         </div>
     </header>
-
-    <br><br>
-
-
-
-
-    <!-- sales history -->
-
 </body>
 </html>
