@@ -42,7 +42,7 @@
                 <a class="nav-link active" aria-current="page" href="#">Home</a>
               </li> --}}
               <li class="nav-item">
-                <a class="nav-link nav-labels-text" href="{{ url('/messages')}}">Messages</a>
+                <a class="nav-link nav-labels-text" href="{{ url('/contacts')}}">Messages</a>
               </li>
             </ul>
 
