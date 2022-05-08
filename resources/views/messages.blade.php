@@ -175,7 +175,7 @@
         </div>
     </div>
     <div class="bg-light input-group fixed-bottom">
-        <input type="search" class="form-control " placeholder="Search Contacts" aria-describedby="search-button">
+        <input type="search" class="form-control " placeholder="Aa" aria-describedby="search-button">
         <button type="submit"class=btn-lg id="send message"><i class='bx bx-send'></i></button>
     </div>
 
