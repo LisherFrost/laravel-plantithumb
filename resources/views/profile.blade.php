@@ -74,7 +74,7 @@
             </div>
             <div class="col-sm-7">
                 <div class="card-body">
-                    <h2 class="card-title">Vijay</h2>
+                    <h2 class="card-title">sample name</h2>
                     <p class="card-text">I am an IT student.</p>
 
                     <!-- uncomment in case -->

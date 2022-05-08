@@ -24,20 +24,23 @@
     <div class="card-body">
         <div class="container">
         <div class="row align-items-start">
+            <center>
+            <h3 class="card-title mb-5">Card title</h3>
+            </center>
             <div class = "col">
             <h5 class="card-title">Plant:</h5>
-            <p class="card-text">plant name</p>
+            <input type="name" class="form-control mb-2" id="exampleInputName1" style = "width: 80%;">
             <h5 class="card-title">Type:</h5>
-            <p class="card-text">smol</p>
+            <input type="name" class="form-control mb-2" id="exampleInputName1" style = "width: 80%;">
             <h5 class="card-title">Location:</h5>
-            <p class="card-text">Old Cabalan</p>
+            <input type="name" class="form-control mb-2" id="exampleInputName1" style = "width: 80%;">
             </div>
 
             <div class = "col">
             <h5 class="card-title">Price:</h5>
-            <p class="card-text">P1500</p>
+            <input type="name" class="form-control mb-2" id="exampleInputName1" style = "width: 80%;">
             <h5 class="card-title">Stock:</h5>
-            <p class="card-text">69</p>
+            <input type="name" class="form-control mb-2" id="exampleInputName1" style = "width: 80%;">
             </div>
         </div>
         </div>
@@ -46,28 +49,27 @@
     <br>
 
         <h5 class="card-title">Description:</h5>
-        <p class="card-text px-4">werwerwerewrewrwerwerrewrewrewrewrwewerrwerwerwe</p>
+        <center>
+        <input type="name" class="form-control mb-2" id="exampleInputName1" style = "width: 80%;">
+        </center>
 
         <h5 class="card-title">Seller:</h5>
-        <p class="card-text px-4">lyn</p>
+        <center>
+        <input type="name" class="form-control mb-2" id="exampleInputName1" style = "width: 80%;">
+        </center>
 
         <br>
 
-        <!-- button -->
-        <div class="container">
-        <div class="row align-items-start">
-            <!-- col 1 -->
-            <div class = "col" style = "margin-left: 15%;">
-            <a href="#" class="btn btn-primary mx-4" style = "width: 100%;">Add to Cart</a>
-            </div>
-            <!-- col 2 -->
-            <div class = "col" style = "margin-left: -15%;">
-            <i class='btn btn-primary mx-4 bx bx-chat bx-sm' style = "min-width: 10%; background-color:rgb(64, 173, 64)"></i>
-            </div>
-        </div>
-        </div>
+        {{-- <center><a href="{{ url('/products')}}" class="btn btn-warning" style = "width: 60%;">Edit Product</a></center>
+        <br> --}}
 
-        <br><br>
+        <!-- button -->
+        <center>
+            <a href="#" class="btn btn-success mx-5" style = "width: 80%;">Save Changes</a>
+        </center>
+        
+
+        <br><br><br>
 
     </div>
 </div>

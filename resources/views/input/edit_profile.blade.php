@@ -21,9 +21,8 @@
     <!-- details -->
     <div class="card" style="width: 35rem;">
         <form>
-            <div class="mb-3">
-                
-
+            <div class="mb-3 mt-4">
+                <h2 class="card-title">sample name</h2>
             </div>
 
             <div class="mb-3">
@@ -42,7 +41,7 @@
             </div> --}}
 
 
-            <button type="submit" class="btn btn-primary mt-4 mb-3">Submit</button>
+            <button type="submit" class="btn btn-success mt-4 mb-5">Save Changes</button>
         </form>
     </div>
 
