@@ -69,18 +69,18 @@
           </div>
         </div>
     </header>
-  <div class="d-flex p-0">
+  <div id="page"class="d-flex p-0">
       <!-- Contact List -->
-    <div id="Contacts"class="d-flex flex-column">
-      <span class="border-end border-4 ">
+    <div id="Contacts"class="d-flex flex-column flex-shrink-1">
+        <span class="border-end border-4 ">
           <div id="messages"class="sticky-top bg-light input-group">
                 <input type="search" class="form-control rounded-pill" placeholder="Search Contacts" aria-describedby="search-button">
                 <button type="submit"class=btn id="search-button"><i class='bx bx-search'></i></button>   
           </div>
-        <!--looped list from database -->
+          <!--looped list from database -->
           <ul id="contactList"class="list-group ">
             <li id="contact"class="list-group-item">
-              <a href="#" class="d-flex p-0 rounded active link-dark" aria_current="page"> 
+              <a href="#" class="d-flex p-0 rounded active link-dark" aria_current="page"> <!--opens selected page of convo-->
               <div>
                 <img src="https://i.ibb.co/VNDZ79y/vijayformal.png" class="card-img-top h-100 border border-3 border-success rounded-circle">
               </div>
@@ -218,10 +218,8 @@
         </span>
     </div>
 
-    <!-- Fetch Conversation from Chosen Customer -->
-    <div>
-      <p >test</p>
-    </div>
+    <!-- Fetched Conversation from Chosen Customer messages.blade.php-->
+                
   </div>
     
 </body>
