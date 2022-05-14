@@ -1,14 +1,18 @@
 @extends('products.layout')
  
 @section('content')
+
+
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Index</h2>
+                <h2>Add / Edit Products</h2>
             </div>
             <div class="pull-right">
                 <a class="btn btn-success" href="{{ route('products.create') }}"> Create New Product</a>
             </div>
+
+            <br><br> <!-- added -->
         </div>
     </div>
    
