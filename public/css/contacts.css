@@ -78,12 +78,14 @@ p
 }
 #Contacts
 {
-    
+    height: 100%;
     padding: 0;
+    padding-bottom: 50px;
+    
 }
 #contactList
 {
-    height:600px;
+    height:100%;
     overflow-y: scroll;
     overflow-x: hidden;
     
@@ -118,9 +120,10 @@ li:hover
 }
 #CustomerName
 {
-    padding: 0px;
+    padding: 5px;
     height: 75px;
     width: 100%;
+    background-color: rgb(209, 207, 207);
 }
 #profileLink
 {
@@ -153,7 +156,7 @@ li:hover
 }
 body
 {
-    height: 700px;
+    height: 100%;
 }
 
 .back_btn
@@ -167,4 +170,27 @@ body
 .back_btn:hover
 {
     color:rgb(59, 172, 84);
+}
+
+#page
+{
+    height: 100%;
+    width: 100%;
+}
+
+#messagepage
+{
+    padding: 0px;
+    height: 100%;
+}
+
+#list
+{
+    height: 100%;
+}
+html
+{
+    height:100%;
+    padding-bottom: 85px;
+
 }

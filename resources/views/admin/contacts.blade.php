@@ -25,7 +25,7 @@
   <div id="page"class="d-flex p-0">
       <!-- Contact List -->
     <div id="Contacts"class="d-flex flex-column flex-shrink-1">
-        <span class="border-end border-4 ">
+        <span id="list"class="border-end border-4 ">
           <div id="messages"class="sticky-top bg-light input-group">
                 <input type="search" class="form-control rounded-pill" placeholder="Search Contacts" aria-describedby="search-button">
                 <button type="submit"class=btn id="search-button"><i class='bx bx-search'></i></button>   
@@ -172,7 +172,162 @@
     </div>
 
     <!-- Fetched Conversation from Chosen Customer messages.blade.php-->
-                
+    <div id="messagepage"class="d-flex flex-column flex-grow-1">
+      <div id="CustomerName" class="d-flex">
+        <img id="customerProfile" src="https://i.ibb.co/VNDZ79y/vijayformal.png" class=" h-100 border border-3 border-success rounded-circle">
+        <div class="align-self-center">
+          <h5 class="p-3">Customer Name</h5>
+        </div>
+        <div class="ms-auto align-self-center ">
+          <a href="#" class="link-dark">
+            <i id="profileLink"class='bx bxs-info-circle' ></i> <!--Link to Profile-->
+          </a>
+        </div>
+      </div>
+      <div id="conversation" class="flex-grow-1"><!--Should Start at bottom-->
+        <!--Received message-->
+          <div id="chat"class="d-flex">
+            <span class="badge rounded-pill bg-success align-self-center" >Received Message</span>
+          </div>
+        <!--sent message-->
+        <div id="chat"class="d-flex">
+            <div class="ms-auto">
+                <span class="badge rounded-pill bg-light text-dark">Sent Message</span>
+            </div>
+        </div><!--Received message-->
+        <div id="chat"class="d-flex">
+            <span class="badge rounded-pill bg-success align-self-center" >Received Message</span>
+        </div>
+        <!--sent message-->
+        <div id="chat"class="d-flex">
+            <div class="ms-auto">
+                <span class="badge rounded-pill bg-light text-dark">Sent Message</span>
+            </div>
+        </div><!--Received message-->
+        <div id="chat"class="d-flex">
+            <span class="badge rounded-pill bg-success align-self-center" >Received Message</span>
+        </div>
+        <!--sent message-->
+        <div id="chat"class="d-flex">
+            <div class="ms-auto">
+                <span class="badge rounded-pill bg-light text-dark">Sent Message</span>
+            </div>
+        </div><!--Received message-->
+        <div id="chat"class="d-flex">
+            <span class="badge rounded-pill bg-success align-self-center" >Received Message</span>
+        </div>
+        <!--sent message-->
+        <div id="chat"class="d-flex">
+            <div class="ms-auto">
+                <span class="badge rounded-pill bg-light text-dark">Sent Message</span>
+            </div>
+        </div><!--Received message-->
+        <div id="chat"class="d-flex">
+            <span class="badge rounded-pill bg-success align-self-center" >Received Message</span>
+        </div>
+        <!--sent message-->
+        <div id="chat"class="d-flex">
+            <div class="ms-auto">
+                <span class="badge rounded-pill bg-light text-dark">Sent Message</span>
+            </div>
+        </div><!--Received message-->
+        <div id="chat"class="d-flex">
+            <span class="badge rounded-pill bg-success align-self-center" >Received Message</span>
+        </div>
+        <!--sent message-->
+        <div id="chat"class="d-flex">
+            <div class="ms-auto">
+                <span class="badge rounded-pill bg-light text-dark">Sent Message</span>
+            </div>
+        </div><!--Received message-->
+        <div id="chat"class="d-flex">
+            <span class="badge rounded-pill bg-success align-self-center" >Received Message</span>
+        </div>
+        <!--sent message-->
+        <div id="chat"class="d-flex">
+            <div class="ms-auto">
+                <span class="badge rounded-pill bg-light text-dark">Sent Message</span>
+            </div>
+        </div><!--Received message-->
+        <div id="chat"class="d-flex">
+            <span class="badge rounded-pill bg-success align-self-center" >Received Message</span>
+        </div>
+        <!--sent message-->
+        <div id="chat"class="d-flex">
+            <div class="ms-auto">
+                <span class="badge rounded-pill bg-light text-dark">Sent Message</span>
+            </div>
+        </div><!--Received message-->
+        <div id="chat"class="d-flex">
+            <span class="badge rounded-pill bg-success align-self-center" >Received Message</span>
+        </div>
+        <!--sent message-->
+        <div id="chat"class="d-flex">
+            <div class="ms-auto">
+                <span class="badge rounded-pill bg-light text-dark">Sent Message</span>
+            </div>
+        </div><!--Received message-->
+        <div id="chat"class="d-flex">
+            <span class="badge rounded-pill bg-success align-self-center" >Received Message</span>
+        </div>
+        <!--sent message-->
+        <div id="chat"class="d-flex">
+            <div class="ms-auto">
+                <span class="badge rounded-pill bg-light text-dark">Sent Message</span>
+            </div>
+        </div><!--Received message-->
+        <div id="chat"class="d-flex">
+            <span class="badge rounded-pill bg-success align-self-center" >Received Message</span>
+        </div>
+      <!--sent message-->
+        <div id="chat"class="d-flex">
+            <div class="ms-auto">
+                <span class="badge rounded-pill bg-light text-dark">Sent Message</span>
+            </div>
+        </div><!--Received message-->
+        <div id="chat"class="d-flex">
+            <span class="badge rounded-pill bg-success align-self-center" >Received Message</span>
+        </div>
+      <!--sent message-->
+        <div id="chat"class="d-flex">
+            <div class="ms-auto">
+                <span class="badge rounded-pill bg-light text-dark">Sent Message</span>
+            </div>
+        </div><!--Received message-->
+        <div id="chat"class="d-flex">
+            <span class="badge rounded-pill bg-success align-self-center" >Received Message</span>
+        </div>
+      <!--sent message-->
+        <div id="chat"class="d-flex">
+            <div class="ms-auto">
+                <span class="badge rounded-pill bg-light text-dark">Sent Message</span>
+            </div>
+        </div><!--Received message-->
+        <div id="chat"class="d-flex">
+            <span class="badge rounded-pill bg-success align-self-center" >Received Message</span>
+        </div>
+      <!--sent message-->
+        <div id="chat"class="d-flex">
+            <div class="ms-auto">
+                <span class="badge rounded-pill bg-light text-dark">Sent Message</span>
+            </div>
+        </div><!--Received message-->
+        <div id="chat"class="d-flex">
+            <span class="badge rounded-pill bg-success align-self-center" >Received Message</span>
+        </div>
+      <!--sent message-->
+        <div id="chat"class="d-flex">
+            <div class="ms-auto">
+                <span class="badge rounded-pill bg-light text-dark">Sent Message</span>
+            </div>
+        </div>
+    </div>
+    <div class="bg-light input-group align-self-end ">
+        <input type="search" class="form-control " placeholder="Aa" aria-describedby="search-button">
+        <button type="submit"class=btn-lg id="send message"><i class='bx bx-send'></i></button>
+    </div>
+    </div>       
+    
   </div>
     
 </body>
