@@ -9,15 +9,15 @@
     <link rel="icon" href="image/plant_logo1.png" type="image/icon type">
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
 
-    <!-- bootstrap 5 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+     <!-- bootstrap 5 -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
     <!-- font awesome cdn link  -->
    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- custom css file link  -->
-    <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="css/status.css">
 
 </head>
 <body>
@@ -54,21 +54,17 @@
              <a href="{{ url('user_profile')}}" class="btnn">Edit Account</a>
              <a href="{{ url('/')}}" class="btnn">Logout</a>
              <br>
-             <a href="{{ url('/status')}}" class="btnn" style = "min-width: 295px;">My Purchases</a>
+             <a href="#" class="btnn" style = "min-width: 295px;">My Purchases</a>
          </form>
      
      </header>
-
-     
 
 <!-- home section starts  -->
 
 <section class="home" id="home">
 
-    <div class="content" style = "margin-top: 50px;">
-        <h3><span style = "color: rgb(44, 231, 44)">fresh</span> products for your</h3>
-        <a href = "{{ url('welcome')}}" class = "back_btn"><h4 class = "display-6"><< Go Back</h4></a>
-       
+    <div class="content">
+        <!-- removed contents for plain template -->
     </div>
 
 </section>
@@ -76,77 +72,20 @@
 <!-- home section ends -->
 
 
-<!-- cart start -->
+<!-- section start -->
 <section id="cart" class="section-p1">
-    <table width="100%">
-        <thead>
-            <tr>
-                <td>Remove</td>
-                <td>Image</td>
-                <td>Product</td>
-                <td>Price</td>
-                <td>Quantity</td>
-                <td>Subtotal</td>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><i class="far fa-times-circle"><a href="#"></a></i></td>
-                <td><img src="image/product/product-1.jpg"></td>
-                <td>Plant 1</td>
-                <td>₱4.99</td>
-                <td><input type="number" value="1"></td>
-                <td>₱4.99</td>
-            </tr>
-            <tr>
-                <td><i class="far fa-times-circle"><a href="#"></a></i></td>
-                <td><img src="image/product/product-2.jpg"></td>
-                <td>Plant 1</td>
-                <td>₱4.99</td>
-                <td><input type="number" value="1"></td>
-                <td>₱4.99</td>
-            </tr>
-            <tr>
-                <td><i class="far fa-times-circle"><a href="#"></a></i></td>
-                <td><img src="image/product/product-3.jpg"></td>
-                <td>Plant 1</td>
-                <td>₱4.99</td>
-                <td><input type="number" value="1"></td>
-                <td>₱4.99</td>
-            </tr>
-        </tbody>
-    </table>
+    <h1 style = "font-size: 24px; margin-top: 30px;">Your Order #numberhere is now being processed . . .</h1>
+    <br>
+    <h1 style = "font-size: 22px;">Status: <span style = "color: rgb(196, 196, 36);">Pending</span></h1>
+    <br>
+    <p style = "font-size: 18px;">Total Amount: <span>     </span></p>
+    <br><br><br>
+    <a href = "{{ url('welcome')}}" class = "back_btn"><h4 class = "display-6"><< Go Back</h4></a>
+
+    <br><br><br><br><br>
 </section>
 
-<section id="cart-add" class="section-p1">
-    <div id="coupon">
-        <h1>Apply Coupon</h1>
-        <div>
-            <input type="text" placeholder="Enter Voucher/Coupon">
-            <button class="btnn">Apply</button>
-        </div>
-    </div>
-
-    <div id="subtotal">
-        <h1>Cart Total</h1>
-        <table>
-            <tr>
-                <td>Cart Subtotal</td>
-                <td>₱4.99</td>
-            </tr>
-            <tr>
-                <td>Shipping</td>
-                <td>Free</td>
-            </tr>
-            <tr>
-                <td><strong>Total</strong></td>
-                <td><strong>₱4.99</strong></td>
-            </tr>
-        </table>
-        <a href = "{{ url('status')}}"><button class="btnn">Checkout</button></a>
-    </div>
-</section>
-<!-- cart end -->
+<!-- section end -->
 
 <!-- footer section starts  -->
 

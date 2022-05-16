@@ -41,6 +41,9 @@ Route::get('/', function () {
     return view('form');
 });
 
+Route::get('/status', function () {
+    return view('status');
+});
 
 // Route::get('/', function () {
 //     return view('index');

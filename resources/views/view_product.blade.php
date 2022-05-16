@@ -180,7 +180,7 @@
 
     </div>
 
-    <div class="credit"> created by <span> Yuri </span> | all rights reserved | Groupname dito</div>
+    <div class="credit"> All Rights Reserved | <span>Plantithumb</span></div>
 
 </section>
 

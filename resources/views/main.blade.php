@@ -56,7 +56,7 @@
         <a href="{{ url('user_profile')}}" class="btnn">Edit Account</a>
         <a href="{{ url('/')}}" class="btnn">Logout</a>
         <br>
-        <a href="#" class="btnn" style = "min-width: 295px;">My Purchases</a>
+        <a href="{{ url('/status')}}" class="btnn" style = "min-width: 295px;">My Purchases</a>
     </form>
 
 </header>
@@ -437,7 +437,7 @@
 
     </div>
 
-    <div class="credit"> created by <span> Yuri </span> | all rights reserved | Groupname dito</div>
+    <div class="credit"> All Rights Reserved | <span>Plantithumb</span></div>
 
 </section>
 
