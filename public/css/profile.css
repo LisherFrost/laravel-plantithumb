@@ -79,6 +79,18 @@ body
   } */
 
 
+  .back_btn
+{
+    font-size: 2.5em;
+    color:rgb(78, 80, 79);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-decoration: none;
+}
+
+.back_btn:hover
+{
+    color:rgb(104, 243, 134);
+}
 
 
 

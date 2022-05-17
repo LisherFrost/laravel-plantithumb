@@ -10,6 +10,7 @@
     <link rel="stylesheet" href={{ URL::asset('css/sales_history.css'); }} >
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet"> <!-- google fonts -->
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'> <!-- boxicons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" /> <!-- font awesome cdn link  -->
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script> <!-- chart -->
     <!-- pie chart -->
     <script type="text/javascript">
@@ -50,20 +51,18 @@
               @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap');
             </style>
             <ul class="navbar-nav">
-              {{-- <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li> --}}
+              
               <li class="nav-item">
                 <a class="nav-link nav-labels-text" href="{{ url('/contacts')}}">Messages</a>
               </li>
             </ul>
 
-            <form class="d-flex">
+            <form class = "me-2 pt-4 ms-5">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                {{-- <button class="btn search-logo" type="submit"><img src="https://i.ibb.co/CtcCGJD/image.png" alt="image" border="0"></button> --}}
             </form>
 
   
+
 
 
             <!-- icons -->
@@ -82,7 +81,6 @@
             <span class="border border-secondary border-3 mx-2 mt-4 rounded icons_buttons">
               <a href = "{{ url('')}}"><i class='bx bx-log-out bx-md px-1 icons' data-bs-toggle="tooltip" data-bs-placement="bottom" title="Log-Out"></i></a>
             </span>
-            
 
 
 
@@ -99,6 +97,9 @@
     <center>
 
     <h1 class = "nav-labels-text" style = "font-size: 3em;">Sales History</h1>
+    <br>
+    <a href = "{{ url('admin')}}" class = "back_btn"><h4><< Go Back</h4></a>
+
     <br><br><br>
 
     <!-- chart -->

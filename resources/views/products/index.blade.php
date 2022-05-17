@@ -2,6 +2,9 @@
  
 @section('content')
 
+    <br>
+    <a href = "{{ url('admin')}}" class = "back_btn"><h4><< Go Back</h4></a>
+    <br>
 
     <div class="row">
         <div class="col-lg-12 margin-tb">
