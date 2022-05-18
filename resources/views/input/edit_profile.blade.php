@@ -13,13 +13,13 @@
 <body>
     <center>
 
-    <a href = "{{ url('/admin')}}">
-        <img src="https://i.ibb.co/jHR2kPZ/plantithumb-revised1-web-nobackg.png" alt="plantithumb-revised1-web-nobackg" border="0" style = "margin-bottom: -150px; margin-top: -100px;">
-    </a>
-
+    <img src="https://i.ibb.co/jHR2kPZ/plantithumb-revised1-web-nobackg.png" alt="plantithumb-revised1-web-nobackg" border="0" style = "margin-bottom: -150px; margin-top: -100px;">
+    
+    <a href = "{{ url('profile')}}" class = "back_btn"><h4><< Go Back</h4></a>
+    <br>
 
     <!-- details -->
-    <div class="card" style="width: 35rem;">
+    <div class="card shadow-lg" style="width: 35rem;">
         <form>
             <div class="mb-3 mt-4">
                 <h2 class="card-title">sample name</h2>
