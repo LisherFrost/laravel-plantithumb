@@ -13,9 +13,8 @@ use App\Http\Controllers\ProductController;
 |
 */
 
-Route::resource('products', ProductController::class);
 
-
+// GENERAL / CUSTOMER VIEW
 Route::get('/cart', function () {
     return view('cart');
 });
@@ -50,7 +49,7 @@ Route::get('/status', function () {
 // });
 
 
-
+// SELLER/ADMIN VIEW
 Route::get('/admin', function () {
     return view('admin/admin');
 });
@@ -67,7 +66,21 @@ Route::get('/sales_history', function () {
     return view('admin/sales_history');
 });
 
+
+
+
+// details / items on SELLER VIEW
+Route::get('/admin/detail1', function () {
+    return view('admin/details/detail1');
+});
+
+
+
+
 // input folder under 'views'
+Route::resource('products', ProductController::class);
+
+
 Route::get('/edit_product', function () {
     return view('input/edit_product');
 });
@@ -81,3 +94,4 @@ Route::get('/contacts', function () {
 Route::get('/messages', function () {
     return view('admin/messages');
 });
+

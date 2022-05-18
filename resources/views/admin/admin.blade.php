@@ -115,251 +115,96 @@
 
       <!-- featured item -->
       <center>
-      <div class="container">
-        <div class="row align-items-start">
-          <!-- col 1 -->
-          <div class = "col">
-            <div class="card" style="width: 100%;">
-              <a href = "#"><img src="https://i.ibb.co/80Y90SW/image.png" id = "myImg" class="card-img-top" alt="..." style = "height: 400px;"></a>
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            
-                <!-- MODAL -->
-                <div id="myModal" class="modal">
-                  <span class="close">&times;</span>
-                  <img class="modal-content" id="img01">
-              
-                  <!-- details -->
-                  <div class="card" style="width: 35rem;">
-                  <img src="https://i.ibb.co/80Y90SW/image.png" class="card-img-top" alt="...">
-                  <div class="card-body">
-                      <div class="container">
-                      <div class="row align-items-start">
-                          <div class = "col">
-                          <h5 class="card-title">Plant:</h5>
-                          <p class="card-text">plant name</p>
-                          <h5 class="card-title">Type:</h5>
-                          <p class="card-text">smol</p>
-                          <h5 class="card-title">Location:</h5>
-                          <p class="card-text">Old Cabalan</p>
-                          </div>
-              
-                          <div class = "col">
-                          <h5 class="card-title">Price:</h5>
-                          <p class="card-text">P1500</p>
-                          <h5 class="card-title">Stock:</h5>
-                          <p class="card-text">69</p>
-                          </div>
-                      </div>
-                      </div>
-                  </div>
-              
-                  <br>
-              
-                      <h5 class="card-title">Description:</h5>
-                      <p class="card-text px-4">werwerwerewrewrwerwerrewrewrewrewrwewerrwerwerwe</p>
-              
-                      <h5 class="card-title">Seller:</h5>
-                      <p class="card-text px-4">lyn</p>
-              
-                      <br>
+          <div class="container">
 
-                      <center><a href="{{ url('/edit_product')}}" class="btn btn-warning" style = "width: 55%;">Edit Product</a></center>
-                      <br>
-              
-                      <!-- button -->
-                      <div class="container">
-                      <div class="row align-items-start">
-                          <!-- col 1 -->
-                          <div class = "col" style = "margin-left: 15%;">
-                          <a href="#" class="btn btn-primary mx-4" style = "width: 100%;">Add to Cart</a>
-                          </div>
-                          <!-- col 2 -->
-                          <div class = "col" style = "margin-left: -15%;">
-                          <i class='btn btn-primary mx-4 bx bx-chat bx-sm' style = "min-width: 10%; background-color:rgb(64, 173, 64)"></i>
-                          </div>
-                      </div>
-                      </div>
-              
-                      <br><br>
-              
+            <!-- 1ST HORIZONAL SET OF ITEMS -->
+
+            <div class="row align-items-start">
+              <!-- col 1 -->
+              <div class = "col">
+                <div class="card" style="width: 100%;">
+                  <a href = "{{ url('admin/detail1')}}"><img src="https://i.ibb.co/80Y90SW/image.png" id = "myImg" class="card-img-top" alt="..." style = "height: 400px;"></a>
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                
+        
+
+                    {{-- <div id="caption"></div> --}}
                   </div>
+                </div>
+              </div>
+              
+          
+              <!-- col 2 -->
+              <div class = "col">
+                <div class="card" style="width: 100%;">
+                  <a href = "{{ url('admin/detail2')}}"><img src="https://i.ibb.co/80Y90SW/image.png" id = "myImg" class="card-img-top" alt="..." style = "height: 400px;"></a>
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                
+          
+          
+
+
+                    {{-- <div id="caption2"></div> --}}
+                  </div>
+                </div>
+              </div>
+
+
+
+              <!-- col 3 -->
+              <div class = "col">
+                <div class="card" style="width: 100%;">
+                  <a href = "{{ url('admin/detail3')}}"><img src="https://i.ibb.co/80Y90SW/image.png" id = "myImg" class="card-img-top" alt="..." style = "height: 400px;"></a>
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              
+
+                    {{-- <div id="caption3"></div> --}}
+                  </div>
+                </div>
               </div>
       
-
-
-                <div id="caption"></div>
-              </div>
-            </div>
-          </div>
-
-
-          <!-- col 2 -->
-          <div class = "col">
-            <div class="card" style="width: 100%;">
-              <img src="https://i.ibb.co/80Y90SW/image.png" id = "myImg2" class="card-img-top" alt="..." style = "height: 400px;">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            
-                <!-- MODAL -->
-                <div id="myModal" class="modal">
-                  <span class="close">&times;</span>
-                  <img class="modal-content" id="img01">
-              
-                  <!-- details -->
-                  <div class="card" style="width: 35rem;">
-                  <img src="https://i.ibb.co/80Y90SW/image.png" class="card-img-top" alt="...">
-                  <div class="card-body">
-                      <div class="container">
-                      <div class="row align-items-start">
-                          <div class = "col">
-                          <h5 class="card-title">Plant:</h5>
-                          <p class="card-text">plant name</p>
-                          <h5 class="card-title">Type:</h5>
-                          <p class="card-text">smol</p>
-                          <h5 class="card-title">Location:</h5>
-                          <p class="card-text">Old Cabalan</p>
-                          </div>
-              
-                          <div class = "col">
-                          <h5 class="card-title">Price:</h5>
-                          <p class="card-text">P1500</p>
-                          <h5 class="card-title">Stock:</h5>
-                          <p class="card-text">69</p>
-                          </div>
-                      </div>
-                      </div>
-                  </div>
-              
-                  <br>
-              
-                      <h5 class="card-title">Description:</h5>
-                      <p class="card-text px-4">werwerwerewrewrwerwerrewrewrewrewrwewerrwerwerwe</p>
-              
-                      <h5 class="card-title">Seller:</h5>
-                      <p class="card-text px-4">lyn</p>
-              
-                      <br>
-
-                      <center><a href="{{ url('/edit_product')}}" class="btn btn-warning" style = "width: 55%;">Edit Product</a></center>
-                      <br>
-              
-                      <!-- button -->
-                      <div class="container">
-                      <div class="row align-items-start">
-                          <!-- col 1 -->
-                          <div class = "col" style = "margin-left: 15%;">
-                          <a href="#" class="btn btn-primary mx-4" style = "width: 100%;">Add to Cart</a>
-                          </div>
-                          <!-- col 2 -->
-                          <div class = "col" style = "margin-left: -15%;">
-                          <i class='btn btn-primary mx-4 bx bx-chat bx-sm' style = "min-width: 10%; background-color:rgb(64, 173, 64)"></i>
-                          </div>
-                      </div>
-                      </div>
-              
-                      <br><br>
-              
-                  </div>
-              </div>
       
-
-
-                <div id="caption2"></div>
-              </div>
             </div>
-          </div>
 
 
 
-          <!-- col 3 -->
-          <div class = "col">
-            <div class="card" style="width: 100%;">
-              <img src="https://i.ibb.co/80Y90SW/image.png" id = "myImg3" class="card-img-top" alt="..." style = "height: 400px;">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            
-                <!-- MODAL -->
-                <div id="myModal" class="modal">
-                  <span class="close">&times;</span>
-                  <img class="modal-content" id="img03">
-              
-                  <!-- details -->
-                  <div class="card" style="width: 35rem;">
-                  <img src="https://i.ibb.co/80Y90SW/image.png" class="card-img-top" alt="...">
+            <!-- 2nd HORIZONTAL SET OF ITEMS -->
+
+            <div class="row align-items-start mt-4">
+              <!-- col 1 -->
+              <div class = "col">
+                <div class="card" style="width: 100%;">
+                  <a href = "{{ url('admin/detail4')}}"><img src="https://i.ibb.co/80Y90SW/image.png" id = "myImg" class="card-img-top" alt="..." style = "height: 400px;"></a>
                   <div class="card-body">
-                      <div class="container">
-                      <div class="row align-items-start">
-                          <div class = "col">
-                          <h5 class="card-title">Plant:</h5>
-                          <p class="card-text">plant name</p>
-                          <h5 class="card-title">Type:</h5>
-                          <p class="card-text">smol</p>
-                          <h5 class="card-title">Location:</h5>
-                          <p class="card-text">Old Cabalan</p>
-                          </div>
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
               
-                          <div class = "col">
-                          <h5 class="card-title">Price:</h5>
-                          <p class="card-text">P1500</p>
-                          <h5 class="card-title">Stock:</h5>
-                          <p class="card-text">69</p>
-                          </div>
-                      </div>
-                      </div>
+
                   </div>
-              
-                  <br>
-              
-                      <h5 class="card-title">Description:</h5>
-                      <p class="card-text px-4">werwerwerewrewrwerwerrewrewrewrewrwewerrwerwerwe</p>
-              
-                      <h5 class="card-title">Seller:</h5>
-                      <p class="card-text px-4">lyn</p>
-              
-                      <br>
-
-                      <center><a href="{{ url('/edit_product')}}" class="btn btn-warning" style = "width: 55%;">Edit Product</a></center>
-                      <br>
-              
-                      <!-- button -->
-                      <div class="container">
-                      <div class="row align-items-start">
-                          <!-- col 1 -->
-                          <div class = "col" style = "margin-left: 15%;">
-                          <a href="#" class="btn btn-primary mx-4" style = "width: 100%;">Add to Cart</a>
-                          </div>
-                          <!-- col 2 -->
-                          <div class = "col" style = "margin-left: -15%;">
-                          <i class='btn btn-primary mx-4 bx bx-chat bx-sm' style = "min-width: 10%; background-color:rgb(64, 173, 64)"></i>
-                          </div>
-                      </div>
-                      </div>
-              
-                      <br><br>
-              
-                  </div>
+                </div>
               </div>
-      
 
+              <!-- col 2 -->
+              <div class = "col">
 
-                <div id="caption3"></div>
               </div>
+
+
+              <!-- col 3 -->
+              <div class = "col">
+                
+              </div>
+
+
+
             </div>
           </div>
-
-
-        <!-- another horizontal set of items -->
-        <!-- pending copy paste -->
-
-
-
-
-        </div>
-      </div>
       </center>
 
 
@@ -369,52 +214,5 @@
     <script src="{{ asset('js/bootstrap.min.js') }}"></script>
     <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script> <!-- boxicons -->
 
-
-    <!-- modal -->
-    <script>
-      // Get the modal
-      var modal = document.getElementById("myModal");
-      
-      // item #1
-      // Get the image and insert it inside the modal - use its "alt" text as a caption
-      var img = document.getElementById("myImg");
-      var modalImg = document.getElementById("img01");
-      var captionText = document.getElementById("caption");
-      img.onclick = function(){
-        modal.style.display = "block";
-        modalImg.src = this.src;
-        captionText.innerHTML = this.alt;
-      }
-
-      // item #2
-      // Get the image and insert it inside the modal - use its "alt" text as a caption
-      var img = document.getElementById("myImg2");
-      var modalImg = document.getElementById("img02");
-      var captionText = document.getElementById("caption2");
-      img.onclick = function(){
-        modal.style.display = "block";
-        modalImg.src = this.src;
-        captionText.innerHTML = this.alt;
-      }
-
-      // item #3
-      // Get the image and insert it inside the modal - use its "alt" text as a caption
-      var img = document.getElementById("myImg3");
-      var modalImg = document.getElementById("img03");
-      var captionText = document.getElementById("caption3");
-      img.onclick = function(){
-        modal.style.display = "block";
-        modalImg.src = this.src;
-        captionText.innerHTML = this.alt;
-      }
-      
-      // Get the <span> element that closes the modal
-      var span = document.getElementsByClassName("close")[0];
-      
-      // When the user clicks on <span> (x), close the modal
-      span.onclick = function() { 
-        modal.style.display = "none";
-      }
-  </script>
 </body>
 </html>
