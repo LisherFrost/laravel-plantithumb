@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- custom css file link  -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
 
 </head>
 <body>
@@ -33,14 +33,27 @@
         <a href="#features">features</a>
         <a href="#products">products</a>
         <a href="#categories">categories</a>
-        <a href="#review">review</a>
     </nav>
 
     <div class="icons">
         <div class="fas fa-bars" id="menu-btn"></div>
+        <div class="fas fa-search" id="search-btn" style="opacity:0.0;"></div>
         <a href = "{{ url('admin_login')}}"><div class = "fas fa-user-edit me-5"></div></a>
-        <div class="fas fa-search" id="search-btn"></div>
-        <a href = "{{ url('contacts')}}"><div class="fas fa-comment-dots"></div></a>
+        <a href = "{{ url('/session')}}"><div class="fa-solid fa-house-chimney"></div></a>
+        @if($checkmessage_received != null)
+            <a href = "{{ url('contacts')}}">
+                <div  class="fas fa-comment-dots" style="">
+                    <p style="margin-top:-50px;margin-right:-25px;font-size:15px;">
+                    <i class="fa-solid fa-bell" style="color:red;"></i></p>
+                    </div>
+                </a>
+                
+                @endif
+                @if($checkmessage_received == null)
+                <a href = "{{ url('contacts')}}"><div class="fas fa-comment-dots"></div></a>
+                
+                @endif
+            <a href="{{ url('order_c')}}"> <div  class="fa-solid fa-dolly" id="cart-btn"></div></a>
         <a href="{{ url('cart')}}"> <div class="fas fa-shopping-cart" id="cart-btn"></div></a>
         <div class="fas fa-user" id="login-btn"></div>
     </div>
@@ -53,10 +66,12 @@
 
     <form action="" class="login-form">
         <h3>Account</h3>
-        <a href="{{ url('user_profile')}}" class="btnn">Edit Account</a>
-        <a href="{{ url('/')}}" class="btnn">Logout</a>
+        <img src="{{asset('uploads/users/'.$data->image) }} " alt="Image"><br>
+        <h4>{{$data->email}} </h4>
+        <a href="{{ route('user_profile')}}" class="btnn">Edit Account</a>
+        <a href="{{ url('/logout')}}" class="btnn">Logout</a>
         <br>
-        <a href="{{ url('/status')}}" class="btnn" style = "min-width: 295px;">My Purchases</a>
+        <!-- <a href="{{ url('/status')}}" class="btnn" style = "min-width: 295px;">My Purchases</a> -->
     </form>
 
 </header>
@@ -68,9 +83,9 @@
 <section class="home" id="home">
 
     <div class="content">
-        <h3><span>fresh</span> products for your</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam libero nostrum veniam facere tempore nisi.</p>
-        <a href="#" class="btnn">shop now</a>
+        <h3>Relaxing <span> indoor plants </span>for your</h3>
+        <p>Indoor plants that can make the atmosphere fresh and relaxing</p>
+        <a href="#products" class="btnn">shop now</a>
     </div>
 
 </section>
@@ -86,23 +101,23 @@
     <div class="box-container">
 
         <div class="box">
-            <img src="image/feature-img-1.png" alt="">
-            <h3>fresh</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt, earum!</p>
+            <img src="../image/feature-img-1.png" alt="">
+            <h3>Good Product</h3>
+            <p>Plants are always in good condition</p>
            
         </div>
 
         <div class="box">
-            <img src="image/feature-img-2.png" alt="">
-            <h3>free delivery</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt, earum!</p>
+            <img src="../image/feature-img-2.png" alt="">
+            <h3>Fast delivery</h3>
+            <p>Fast and safe delivery right to your door step</p>
            
         </div>
 
         <div class="box">
-            <img src="image/feature-img-3.png" alt="">
-            <h3>easy payments</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt, earum!</p>
+            <img src="../image/feature-img-3.png" alt="">
+            <h3>Easy to communicate</h3>
+            <p>Contact your seller and communicate to them easily</p>
            
         </div>
 
@@ -113,7 +128,6 @@
 <!-- features section ends -->
 
 <!-- products section starts  -->
-
 <section class="products" id="products">
 
     <h1 class="heading"> our <span>products</span> </h1>
@@ -121,67 +135,15 @@
     <div class="swiper product-slider">
 
         <div class="swiper-wrapper">
-
-            <div class="swiper-slide box">
-                <img src="image/product/product-1.jpg" alt="" >
-                <h3>Plant 1</h3>
-                <div class="price"> ₱4.99/- - 10.99/- </div>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
+            @foreach ($products as $product)
+                <div class="swiper-slide box">
+                    <img src="{{asset('uploads/products/'.$product->image) }} " alt="" >
+                    <h3>{{$product->plant_name}} </h3>
+                    <div class="price"> ₱ {{$product->plant_price}} </div>
+                    <a href="{{ route('view_product',$product->id) }}" class="btnn" style="margin: 10px;">view / add to cart</a>
+                
                 </div>
-                <a href="{{ url('view_product')}}" class="btnn" style="margin: 10px;">view</a>
-                <a href="#" class="btnn">add to cart</a>
-            </div>
-
-            <div class="swiper-slide box">
-                <img src="image/product/product-2.jpg" alt="">
-                <h3>Plant 2</h3>
-                <div class="price"> ₱4.99/- - 10.99/- </div>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-                <a href="{{ url('view_product')}}" class="btnn" style="margin: 10px;">view</a>
-                <a href="#" class="btnn">add to cart</a>
-            </div>
-
-            <div class="swiper-slide box">
-                <img src="image/product/product-3.jpg" alt="">
-                <h3>Plant 3</h3>
-                <div class="price"> ₱4.99/- - 10.99/- </div>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-                <a href="{{ url('view_product')}}" class="btnn" style="margin: 10px;">view</a>
-                <a href="#" class="btnn">add to cart</a>
-            </div>
-
-            <div class="swiper-slide box">
-                <img src="image/product/product-4.jpg" alt="">
-                <h3>Plant 4</h3>
-                <div class="price"> ₱4.99/- - 10.99/- </div>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-                <a href="{{ url('view_product')}}" class="btnn" style="margin: 10px;">view</a>
-                <a href="#" class="btnn">add to cart</a>
-            </div>
-
+            @endforeach
         </div>
 
     </div>
@@ -189,67 +151,15 @@
     <div class="swiper product-slider">
 
         <div class="swiper-wrapper">
-
+            @foreach ($products->reverse() as $product)
             <div class="swiper-slide box">
-                <img src="image/product/product-5.jpg" alt="">
-                <h3>Plant 5</h3>
-                <div class="price"> ₱4.99/- - 10.99/- </div>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-                <a href="{{ url('view_product')}}" class="btnn" style="margin: 10px;">view</a>
-                <a href="#" class="btnn">add to cart</a>
+                <img  src="{{asset('uploads/products/'.$product->image) }} " alt="">
+                <h3>{{$product->plant_name}}</h3>
+                <div class="price"> ₱ {{$product->plant_price}} </div>
+                <a href="{{ route('view_product',$product->id) }}" class="btnn" style="margin: 10px;">view / add to cart</a>
+                
             </div>
-
-            <div class="swiper-slide box">
-                <img src="image/product/product-6.png" alt="">
-                <h3>Plant 6</h3>
-                <div class="price"> ₱4.99/- - 10.99/- </div>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-                <a href="{{ url('view_product')}}" class="btnn" style="margin: 10px;">view</a>
-                <a href="#" class="btnn">add to cart</a>
-            </div>
-
-            <div class="swiper-slide box">
-                <img src="image/product/product-7.jpg" alt="">
-                <h3>Plant 7</h3>
-                <div class="price"> ₱4.99/- - 10.99/- </div>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-                <a href="{{ url('view_product')}}" class="btnn" style="margin: 10px;">view</a>
-                <a href="#" class="btnn">add to cart</a>
-            </div>
-
-            <div class="swiper-slide box">
-                <img src="image/product/product-8.jpg" alt="">
-                <h3>Plant 8</h3>
-                <div class="price"> ₱4.99/- - 10.99/- </div>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-                <a href="{{ url('view_product')}}" class="btnn" style="margin: 10px;">view</a>
-                <a href="#" class="btnn">add to cart</a>
-            </div>
-
+            @endforeach
         </div>
 
     </div>
@@ -261,134 +171,27 @@
 
 <!-- categories section starts  -->
 
-<section class="categories" id="categories">
+<section class="products" id="categories">
 
     <h1 class="heading"> product <span>categories</span> </h1>
 
-    <div class="box-container">
+    <div class="swiper product-slider">
 
-        <div class="container">
-            <div class="row align-items-start">
-
-              <!-- col 1 -->
-              <div class="col">
-                <div class="box">
-                    <img src="image/categories/1.png" alt="">
-                    <h3>Category1</h3>
-                    <p>Up to 45% off</p>
-                    <a href="#" class="btnn">view</a>
+        <div class="swiper-wrapper">
+            @foreach($categories as $cat)
+                <div class="swiper-slide box">
+                    <img src="{{asset('image/categories/'.$cat->image) }} " alt="" >
+                    <h3>{{$cat->name}}</h3>
+                    <div class="price">Type </div>
+                    <a href="{{ url('category/'.$cat->id)}}" class="btnn" style="margin: 10px;">view</a>
                 </div>
-
-                <br>
-                <div class="box">
-                    <img src="image/categories/4.png" alt="">
-                    <h3>Category4</h3>
-                    <p>upto 45% off</p>
-                    <a href="#" class="btnn">view</a>
-                </div>
-              </div>
-
-              <!-- col 2 -->
-              <div class="col">
-                <div class="box">
-                    <img src="image/categories/2.png" alt="">
-                    <h3>Category2</h3>
-                    <p>Up to 45% off</p>
-                    <a href="#" class="btnn">view</a>
-                </div>
-              </div>
-
-              <!-- col 3 -->
-              <div class="col">
-                <div class="box">
-                    <img src="image/categories/3.png" alt="">
-                    <h3>Category3</h3>
-                    <p>Up to 45% off</p>
-                    <a href="#" class="btnn">view</a>
-                </div>
-              </div>
-
-            
-
-            </div>
+            @endforeach
         </div>
 
-    </div>
-
+        
 </section>
 
 <!-- categories section ends -->
-
-<!-- review section starts  -->
-
-<section class="review" id="review">
-
-    <h1 class="heading"> customer's <span>review</span> </h1>
-
-    <div class="swiper review-slider">
-
-        <div class="swiper-wrapper">
-
-            <div class="swiper-slide box">
-                <img src="image/pic-1.png" alt="">
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde sunt fugiat dolore ipsum id est maxime ad tempore quasi tenetur.</p>
-                <h3>Mel Mark</h3>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-            </div>
-
-            <div class="swiper-slide box">
-                <img src="image/pic-2.png" alt="">
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde sunt fugiat dolore ipsum id est maxime ad tempore quasi tenetur.</p>
-                <h3>John Bryan</h3>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-            </div>
-
-            <div class="swiper-slide box">
-                <img src="image/pic-3.png" alt="">
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde sunt fugiat dolore ipsum id est maxime ad tempore quasi tenetur.</p>
-                <h3>Yuri</h3>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-            </div>
-
-            <div class="swiper-slide box">
-                <img src="image/pic-4.png" alt="">
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde sunt fugiat dolore ipsum id est maxime ad tempore quasi tenetur.</p>
-                <h3>Neo</h3>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- review section ends -->
-
 
 
 

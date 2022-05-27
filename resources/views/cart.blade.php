@@ -37,8 +37,9 @@
          <div class="icons">
              <div class="fas fa-bars" id="menu-btn"></div>
              <a href = "{{ url('admin_login')}}"><div class = "fas fa-user-edit me-5"></div></a>
-             <div class="fas fa-search" id="search-btn"></div>
+             <a href = "{{ url('/session')}}"><div class="fa-solid fa-house-chimney"></div></a>
              <a href = "{{ url('contacts')}}"><div class="fas fa-comment-dots"></div></a>
+             <a href="{{ url('order_c')}}"> <div  class="fa-solid fa-dolly" id="cart-btn"></div></a>
              <a href="{{ url('cart')}}"> <div class="fas fa-shopping-cart" id="cart-btn"></div></a>
              <div class="fas fa-user" id="login-btn"></div>
          </div>
@@ -66,8 +67,8 @@
 <section class="home" id="home">
 
     <div class="content" style = "margin-top: 50px;">
-        <h3><span style = "color: rgb(44, 231, 44)">fresh</span> products for your</h3>
-        <a href = "{{ url('welcome')}}" class = "back_btn"><h4 class = "display-6"><< Go Back</h4></a>
+        <h3>My <span style = "color: rgb(44, 231, 44)">Cart</span> </h3>
+        <a href = "{{ url('/session')}}" class = "back_btn"><h4 class = "display-6"><< Go Back</h4></a>
        
     </div>
 
@@ -84,36 +85,30 @@
                 <td>Remove</td>
                 <td>Image</td>
                 <td>Product</td>
+                <td>Mode of payment</td>
                 <td>Price</td>
                 <td>Quantity</td>
-                <td>Subtotal</td>
+                <td>Total price</td>
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td><i class="far fa-times-circle"><a href="#"></a></i></td>
-                <td><img src="image/product/product-1.jpg"></td>
-                <td>Plant 1</td>
-                <td>₱4.99</td>
-                <td><input type="number" value="1"></td>
-                <td>₱4.99</td>
-            </tr>
-            <tr>
-                <td><i class="far fa-times-circle"><a href="#"></a></i></td>
-                <td><img src="image/product/product-2.jpg"></td>
-                <td>Plant 1</td>
-                <td>₱4.99</td>
-                <td><input type="number" value="1"></td>
-                <td>₱4.99</td>
-            </tr>
-            <tr>
-                <td><i class="far fa-times-circle"><a href="#"></a></i></td>
-                <td><img src="image/product/product-3.jpg"></td>
-                <td>Plant 1</td>
-                <td>₱4.99</td>
-                <td><input type="number" value="1"></td>
-                <td>₱4.99</td>
-            </tr>
+            @foreach($order_tbls as $order)
+                @if($order->buyer_id == $data->id)
+                     @foreach($products as $prod)
+                        @if( $prod->id == $order->prod_id)
+                        <tr>
+                            <td><a href="{{ url('destroy/'.$order->id)}}"><i class="far fa-times-circle"></i></a></td>
+                            <td><img src="{{asset('uploads/products/'.$prod->image) }}"></td>
+                            <td>{{$prod->plant_name}} </td>
+                            <td>{{$order->payment_method }}</td>
+                            <td>₱ {{$prod->plant_price }}</td>
+                            <td>₱ {{$order->order_quantity}}</td>
+                                 <td>₱ {{ $order->order_quantity * $prod->plant_price }}</td> 
+                        </tr>
+                        @endif
+                     @endforeach
+                @endif
+            @endforeach
         </tbody>
     </table>
 </section>
@@ -128,28 +123,70 @@
     </div>
 
     <div id="subtotal">
-        <h1>Cart Total</h1>
+        <h1>Cart Total
         <table>
             <tr>
+                @php
+                    {{$total = 0  ;}}
+                    {{$deliver = 0  ;}}
+                @endphp
+                @foreach($order_tbls as $order)
+                    @if($order->buyer_id == $data->id)
+                        @foreach($products as $prod)
+                            @if( $prod->id == $order->prod_id)
+                                @php
+                                    {{$total += $order->order_quantity * $prod->plant_price ;}}
+
+                                 @endphp
+                                 
+                                @if($order->payment_method == 'Cash on delivery')
+                                    @php
+                                        {{ $deliver = 40 * $order->order_quantity;}}
+                                    @endphp
+                                @endif
+
+                            @endif
+                        @endforeach
+                    @endif
+                @endforeach
                 <td>Cart Subtotal</td>
-                <td>₱4.99</td>
+                <td>
+                    @php
+                        {{echo '₱'.$total;}}    
+                    @endphp
+                </td>
             </tr>
             <tr>
-                <td>Shipping</td>
-                <td>Free</td>
+                <td>Shipping(₱40/COD - ₱0/COP)</td>
+                <td>
+                    @php
+                        {{echo '₱'.$deliver;}}    
+                    @endphp
+                </td>
             </tr>
             <tr>
                 <td><strong>Total</strong></td>
-                <td><strong>₱4.99</strong></td>
+                <td><strong>
+                    @php
+                        {{echo '₱'.($deliver + $total);}}  
+                    @endphp
+                </strong></td>
             </tr>
         </table>
-        <a href = "{{ url('status')}}"><button class="btnn">Checkout</button></a>
+       
+            <a href = "{{ route('updata_status')}}"><button class="btnn">Checkout</button></a>
+        </h1>
     </div>
 </section>
+<br>
+<br>
 <!-- cart end -->
 
-<!-- footer section starts  -->
 
+
+
+<!-- footer section starts  -->
+<!-- 
 <section class="footer">
 
     <div class="box-container">
@@ -186,7 +223,7 @@
 
     <div class="credit"> All Rights Reserved | <span>Plantithumb</span></div>
 
-</section>
+</section> -->
 
 <!-- footer section ends -->
 

@@ -10,8 +10,20 @@
     <link rel="stylesheet" href={{ URL::asset('css/sales_history.css'); }} >
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet"> <!-- google fonts -->
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'> <!-- boxicons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" /> <!-- font awesome cdn link  -->
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script> <!-- chart -->
+    
+     <!-- bootstrap 5 -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- font awesome cdn link  -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+
+   <br><br><br><br>
+
+    
     <!-- pie chart -->
     <script type="text/javascript">
       google.charts.load('current', {'packages':['corechart']});
@@ -40,53 +52,39 @@
 </head>
 <body>
     <!-- navbar -->
-    <header class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-        <div class="container-fluid nav-home shadow-lg">
-          <a href = "{{ url('/admin')}}" class="navbar-brand nav-labels"><img src="https://i.ibb.co/jHR2kPZ/plantithumb-revised1-web-nobackg.png" alt="plantithumb-revised1-web-nobackg" class = "plant-logo" border="0"></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <style>
-              @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap');
-            </style>
-            <ul class="navbar-nav">
-              
-              <li class="nav-item">
-                <a class="nav-link nav-labels-text" href="{{ url('/contacts')}}">Messages</a>
-              </li>
-            </ul>
+    <header class="header">
+   <!-- <img src="image/logo1.png" class="logo"> -->
+    <a href="admin" class="logo">  <i class="fa-solid fa-seedling"></i> Plantithumb </a> 
 
-            <form class = "me-2 pt-4 ms-5">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            </form>
+    <div class="icons">
+        <div class="fas fa-bars" id="menu-btn"></div>
+        <div class="fas fa-search" id="search-btn" style="opacity:0.0;"></div>
+        <a href = "{{ url('admin')}}"><div class="fa-solid fa-house-chimney"></div></a>
+        <a href = "{{ url('sales_history')}}"><div class="fa-solid fa-chart-line"></div></a>
+        <a href = "{{ url('contacts')}}"><div class="fas fa-comment-dots"></div></a>
+        <a href="{{ url('orders')}}"> <div  class="fa-solid fa-dolly" id="cart-btn"></div></a>
+        <a href = "{{ url('products')}}"><div   class="fa-solid fa-clipboard-list" id="cart-btn" ></div></a>
 
-  
+        <div class="fas fa-user" id="login-btn"></div>
+    </div>
+
+    <form action="" class="search-form">
+        <input type="search" id="search-box" placeholder="search here...">
+        <label for="search-box" class="fas fa-search"></label>
+    </form>
 
 
+    <form action="" class="login-form">
+        <h3>Account</h3>
+        
+        <a href="{{ url('profile')}}" class="btnn">Edit Account</a>
+        <a href="{{ url('/logout')}}" class="btnn">Logout</a>
+        <br>
+        <a href="{{ url('/status')}}" class="btnn" style = "min-width: 295px;">My Purchases</a>
+    </form>
 
-            <!-- icons -->
-            <span class="border border-secondary border-3 mx-2 mt-4 rounded icons_buttons">
-              <a href = "{{ url('sales_history')}}"><i class='bx bx-line-chart bx-md px-1 icons' data-bs-toggle="tooltip" data-bs-placement="bottom" title="Sales History"></i></a>
-            </span>
+</header>
 
-            <span class="border border-secondary border-3 mx-2 mt-4 rounded icons_buttons">
-              <a href = "{{ url('profile')}}"><i class='bx bx-user-circle bx-md px-1 icons' data-bs-toggle="tooltip" data-bs-placement="bottom" title="My Profile"></i></a>
-            </span>
-
-            <span class="border border-secondary border-3 mx-2 mt-4 rounded icons_buttons">
-              <a href = "{{ url('products')}}"><i class='bx bx-package bx-md px-1 icons' data-bs-toggle="tooltip" data-bs-placement="bottom" title="Add / Edit Product"></i></a>
-            </span>
-            
-            <span class="border border-secondary border-3 mx-2 mt-4 rounded icons_buttons">
-              <a href = "{{ url('')}}"><i class='bx bx-log-out bx-md px-1 icons' data-bs-toggle="tooltip" data-bs-placement="bottom" title="Log-Out"></i></a>
-            </span>
-
-
-
-          </div>
-        </div>
-    </header>
 
     <br><br>
 
@@ -94,12 +92,9 @@
 
 
     <!-- sales history -->
+  
     <center>
-
     <h1 class = "nav-labels-text" style = "font-size: 3em;">Sales History</h1>
-    <br>
-    <a href = "{{ url('admin')}}" class = "back_btn"><h4><< Go Back</h4></a>
-
     <br><br><br>
 
     <!-- chart -->
@@ -107,102 +102,120 @@
       <div class="row gx-5">
         <div class="col">
          <div class="p-3 border bg-light">
-          <div id="chart_div" style = "width: 100%;"></div> <!-- bar chart -->
+            <div id="columnchart_material" style="width: 700px; height: 400px;"></div>
          </div>
-        </div>
-        <div class="col">
-          <div class="p-3 border bg-light">
-            <div id="piechart" style="width: 100%; height: 200px;"></div> <!-- pie chart -->
-          </div>
         </div>
       </div>
     </div>
-
-    <br><br>
-
-
-
-    <table class="table table-striped" style = "width: 60%;">
-      <thead>
-        <tr>
-          <th scope="col">ID</th>
-          <th scope="col">Category</th>
-          <th scope="col">Prod. Name</th>
-          <th scope="col">Seller</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>Mobile Devices</td>
-          <td>Samsung 69</td>
-          <td>SAMSUNG</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Keyboards / Mouse</td>
-          <td>Razer mouse</td>
-          <td>Razer Inc.</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>Instruments</td>
-          <td>YAMAHA Guitar</td>
-          <td>Yamaha</td>
-        </tr>
-      </tbody>
-    </table>
-    </center>
+<br>
+<br>
+<br>
+<div style = "margin-left:10%;float:left;width: 30%;">
+      <center><h3> Summary</h3></center><br>
+      <table class="table table-striped" style = >
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Year-month</th>
+            <th scope="col">Total sale</th>
+            <th scope="col">Purchased</th>
+          </tr>
+        </thead>
+        <tbody>
+        @php
+            {{$i = 0; }}
+        @endphp
+          @foreach($reports as $report)
+            @foreach($products as $product)
+              @if($report->seller_id == $product->id )
+                <tr>
+                  <th scope="row">{{$i += 1;}} </th>
+                  <td>{{$report->date_report}} </td>
+                  <td>{{$report->total_sales}} </td>
+                  <td>{{$report->num_purchase}} </td>
+                </tr>
+              @endif
+            @endforeach
+          @endforeach 
+        </tbody>
+      </table> 
+    </div>
 
 
-    <!-- JAVASCRIPT -->
+      <div style = "margin-left:5%;float:left;width: 40%;">
+      <center><h3>Purchased History</h3> </center> <br>
+
+        <table class="table table-striped" >
+          <thead>
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Customer name</th>
+              <th scope="col">Plant name</th>
+              <th scope="col">Date of purchase</th>
+            </tr>
+          </thead>
+          <tbody>
+              @foreach($orders as $order)
+                @foreach($users as $user)
+                  @foreach($products as $product)
+                    @if($user->id == $order->buyer_id && $product->id == $order->prod_id)
+                      <tr>
+                        <th scope="row">{{$i += 1;}} </th>
+                        <td>{{$user->name}} </td>
+                        <td>{{$product->plant_name}} </td>
+                        <td>{{$order->created_at}} </td>
+                      </tr>
+                    @endif
+                @endforeach
+              @endforeach
+              @endforeach
+          </tbody>
+        </table> 
+      </div>
+
+    <!--JAVASCRIPT -->
 
     <!-- bar chart -->
-    <script>
-      google.charts.load('current', {packages: ['corechart', 'bar']});
-      google.charts.setOnLoadCallback(drawBasic);
 
-      function drawBasic() {
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      const _date = {!! json_encode($date) !!};
+      const _sale = {!! json_encode($sale) !!};
 
-      var data = new google.visualization.DataTable();
-      data.addColumn('timeofday', 'Time of Day');
-      data.addColumn('number', 'Motivation Level');
+      
+      var arr = [];
+      arr.push(['Year', 'Sales']);
+      
+      for(var i=0;i < _date.length;i++ )
+      {
+        var arr2 = [];
 
-      data.addRows([
-        [{v: [8, 0, 0], f: '8 am'}, 1],
-        [{v: [9, 0, 0], f: '9 am'}, 2],
-        [{v: [10, 0, 0], f:'10 am'}, 3],
-        [{v: [11, 0, 0], f: '11 am'}, 4],
-        [{v: [12, 0, 0], f: '12 pm'}, 5],
-        [{v: [13, 0, 0], f: '1 pm'}, 6],
-        [{v: [14, 0, 0], f: '2 pm'}, 7],
-        [{v: [15, 0, 0], f: '3 pm'}, 8],
-        [{v: [16, 0, 0], f: '4 pm'}, 9],
-        [{v: [17, 0, 0], f: '5 pm'}, 10],
-      ]);
+        arr2.push(_date[i]);
+        arr2.push(_sale[i]);
 
-      var options = {
-        title: 'Motivation Level Throughout the Day',
-        hAxis: {
-          title: 'Time of Day',
-          format: 'h:mm a',
-          viewWindow: {
-            min: [7, 30, 0],
-            max: [17, 30, 0]
+        arr.push(arr2);
+
+      }
+      console.log(arr);
+
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable(arr);
+
+        var options = {
+          chart: {
+            title: 'Sales Summary',
+            subtitle: _date,
           }
-        },
-        vAxis: {
-          title: 'Rating (scale of 1-10)'
-        }
-      };
+        };
 
-      var chart = new google.visualization.ColumnChart(
-        document.getElementById('chart_div'));
+        var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
 
-      chart.draw(data, options);
-    }
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+      }
     </script>
-
   
 </body>
 </html>

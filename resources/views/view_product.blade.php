@@ -6,50 +6,97 @@
     <meta name="viewport" content="width=Ddevice-width, initial-scale=1.0">
     <title>Plantithum - product page</title>
 
+    <!-- bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="../css/style.css">
+    
       <!-- font awesome cdn link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <!-- custom css file link  -->
-    <link rel="stylesheet" href="css/product.css">
+    <link rel="stylesheet" href="../css/product.css">
 </head>
 <body>
 
+<header class="header">
+   <!-- <img src="image/logo1.png" class="logo"> -->
+    <a href="#" class="logo">  <i class="fa-solid fa-seedling"></i> Plantithumb </a> 
+
+    <div class="icons">
+        <div class="fas fa-bars" id="menu-btn"></div>
+        <a href = "{{ url('admin_login')}}"><div class = "fas fa-user-edit me-5"></div></a>
+        <a href = "{{ url('/session')}}"><div class="fa-solid fa-house-chimney"></div></a>
+        <a href = "{{ url('contacts')}}"><div class="fas fa-comment-dots"></div></a>
+            <a href="{{ url('order_c')}}"> <div  class="fa-solid fa-dolly" id="cart-btn"></div></a>
+        <a href="{{ url('cart')}}"> <div class="fas fa-shopping-cart" id="cart-btn"></div></a>
+        <div class="fas fa-user" id="login-btn"></div>
+    </div>
+
+    <form action="" class="search-form">
+        <input type="search" id="search-box" placeholder="search here...">
+        <label for="search-box" class="fas fa-search"></label>
+    </form>
+
+
+    <form action="" class="login-form">
+        <h3>Account</h3>
+        <a href="{{ route('user_profile')}}" class="btnn">Edit Account</a>
+        <a href="{{ url('/logout')}}" class="btnn">Logout</a>
+        <br>
+        <a href="{{ url('/status')}}" class="btnn" style = "min-width: 295px;">My Purchases</a>
+    </form>
+
+</header>
+
     <!-- product detail starts -->
-    <section class="product-section">
-        <img src="image/product/product-1.jpg" alt="" class="product-image">
+   <!-- product detail starts -->
+   <section class="product-section">
+        <img src="{{asset('uploads/products/'.$product->image) }}" alt="" class="product-image">
         <div class="product-detail">
-            <h1 class="product-title">Product Title</h1>
-            <p class="loc" style="color: var(--green);">Category label</p>
-            <p class="product-des">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem culpa nam sit labore reiciendis recusandae cupiditate saepe distinctio molestias officia dolor fugiat obcaecati omnis dolores fugit necessitatibus, adipisci excepturi. Ipsum.</p>
+            <h1 class="product-title">Product: {{$product->plant_name}} </h1>
+            <p class="loc" style="color: var(--green);">Category:{{$product->plant_type }} </p>
+            <p class="product-des">Detail: {{$product->plant_description }} </p>
             <div class="loc">
                 <i class="fa-solid fa-location-dot"></i>
-                <p>location address sample streeet 2022</p>
+                <p>{{$product->plant_location }}</p>
             </div>
 
             <div class="stars">
-                <i class="fas fa-star"></i>
+                <!-- <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
                 <span class="rating-count">4,025 reviews</span>
-            </div>
+            </div> -->
 
-            <p class="price">₱4.99</p>
-            <p class="product-des" style="float: right;">9999 pieces available</p>
-            <div class="container">
-                <label for="quantity" class="loc">Quantity: </label>
-                <div class="dec button">-</div>
-                <input type="text" name="qty" id="1" value="0" class="input-filed">
-                <div class="inc button">+</div>
-            </div>
-          
-            <a href="#" class="btn">add to cart</a>
+            <p class="price">₱{{$product->plant_price }}</p>
+            <p class="product-des" style="float: right;">{{$product->stock }} pieces available</p>
+            <form action="{{ route('addTocart',$product->id) }}" method="POST">
+                @csrf   
+                @method('patch')
+
+                <div class="container">
+                    <label for="quantity" class="loc">Quantity: </label>
+                    <input type="number" value="0" name="qty" id="1" class="input-filed">
+                </div>
+                <div class="container">
+                    <label for="quantity" class="loc">Delivery: </label>
+                    <select type="text" name="delivery" >
+                        <option value="Cash on delivery">Cash on delivery</option>                    
+                        <option value="Cash on pick-up">Cash on pick-up</option>                    
+                    </select>   
+                </div>
+                <button style="float:left;" type="submit" class="btn">add to cart</button>
+            </form>
+            <a href="{{ route('viewMessage',$product->seller_id) }}" style="float:left;margin-left:20px;"><button class="btn">Message</button></a>
         </div>
     </section>
-    <!-- product detail end -->
+        <!-- product detail end -->
 
 <!-- add review form -->
-<section class="add-review-section">
+<!-- <section class="add-review-section">
     <h1 class="rating-text">add a review</h1>
     <textarea placeholder="review" class="review-field"></textarea>
    <p class="rating-text">how much you liked the product?</p>
@@ -67,16 +114,16 @@
           <label for="rate-1" class="fas fa-star"></label>
         </div>
       </div>
-    <!-- condition to show either of one button kaw na bahala mel -->
+   condition to show either of one button kaw na bahala mel
     <a href="#" class="btn">Add Review</a>
     <a href="#" class="btn">Edit Review</a>
-</section>
+</section>  -->
 
 <!-- add review form end-->
 
 <!-- review section starts  -->
 
-<section class="review" id="review">
+<!-- <section class="review" id="review">
 
     <h1 class="heading"> customer's <span>review</span> </h1>
 
@@ -140,7 +187,7 @@
 
     </div>
 
-</section>
+</section> -->
 
 <!-- review section ends -->
 
@@ -172,7 +219,7 @@
         <div class="box">
             <h3>Download Our App</h3>
             <p>Shop on mobile !</p>
-            <img src="image/plant_logo.png" class="mob">
+            <img src="../image/plant_logo.png" class="mob">
             <br>
             <a href="#" class="btn">Download here</a>
             

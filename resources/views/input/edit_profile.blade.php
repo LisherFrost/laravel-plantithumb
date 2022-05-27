@@ -13,26 +13,47 @@
 <body>
     <center>
 
-    <img src="https://i.ibb.co/jHR2kPZ/plantithumb-revised1-web-nobackg.png" alt="plantithumb-revised1-web-nobackg" border="0" style = "margin-bottom: -150px; margin-top: -100px;">
-    
-    <a href = "{{ url('profile')}}" class = "back_btn"><h4><< Go Back</h4></a>
-    <br>
+    <a href = "{{ url('/admin')}}">
+        <img src="https://i.ibb.co/jHR2kPZ/plantithumb-revised1-web-nobackg.png" alt="plantithumb-revised1-web-nobackg" border="0" style = "margin-bottom: -150px; margin-top: -100px;">
+    </a>
+
 
     <!-- details -->
-    <div class="card shadow-lg" style="width: 35rem;">
-        <form>
+    <div class="card" style="width: 35rem;">
+
+
+        <form action="{{ route('input.update_profile',$data->id) }}" method="POST" enctype="multipart/form-data">
+            @csrf   
+            @method('patch')
+            <input name="_method" type="hidden" value="PATCH">
             <div class="mb-3 mt-4">
-                <h2 class="card-title">sample name</h2>
+                <h2 class="card-title">Edit Profile</h2>
+            </div>
+            <input type="text" class="form-control" name="type"  value="{{ $data->type}} " id="type" style = "width: 70%;" hidden>
+
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label mt-3">Image</label>
+                <input type="file" class="form-control"  name="image"  value="{{ $data->image}} " id="imageyle"  style = "width: 70%;">
             </div>
 
             <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label mt-3">Name</label>
-            <input type="name" class="form-control" id="exampleInputName1" style = "width: 70%;">
+                <label for="exampleInputPassword1" class="form-label">Name</label>
+                <input type="text" class="form-control"name="name"  value="{{ $data->name}} " id="name" style = "width: 70%;">
             </div>
 
             <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Location</label>
-            <input type="name" class="form-control" id="exampleInputLocation1" style = "width: 70%;">
+                <label for="exampleInputPassword1" class="form-label">Location</label>
+                <input type="text" class="form-control" name="address"  value="{{ $data->address}} " id="address" style = "width: 70%;">
+            </div>
+
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Email</label>
+                <input type="email" class="form-control" name="email"  value="{{ $data->email}} " id="email" style = "width: 70%;">
+            </div>
+
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Enter new password</label>
+                <input type="password" class="form-control" name="password" placeholder="Leave blank if you don't want to change"  id="password" style = "width: 70%;">
             </div>
 
             {{-- <div class="mb-3 form-check">

@@ -1,218 +1,135 @@
-<!-- 
-  TODO: (Seller view)
-  - redesign sa products (add products) view
-  - header, magkakapareho lahat
-  - redesign of /products page
-
-  
--->
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>PlantiThumb | Seller</title>
-    <link rel="icon" type="url" href="https://i.ibb.co/gvrdcqf/279907607-397731735539573-6502971206019149935-n.gif">
-    <link rel="stylesheet" href={{ asset('css/bootstrap.css') }}>
-    <link rel="stylesheet" href={{ URL::asset('css/admin.css'); }} >
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet"> <!-- google fonts -->
-    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'> <!-- boxicons -->
+    <title>Plantithumb</title>
+
+    <link rel="icon" href="image/plant_logo1.png" type="image/icon type">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <!-- bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- font awesome cdn link  -->
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+
 </head>
 <body>
-      <!-- navbar -->
-      <header class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-          <div class="container-fluid nav-home shadow-lg">
-            <a href = "{{ url('/admin')}}" class="navbar-brand nav-labels"><img src="https://i.ibb.co/jHR2kPZ/plantithumb-revised1-web-nobackg.png" alt="plantithumb-revised1-web-nobackg" class = "plant-logo" border="0"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-              <style>
-                @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap');
-              </style>
-              <ul class="navbar-nav">
-                
-                <li class="nav-item">
-                  <a class="nav-link nav-labels-text" href="{{ url('/contacts')}}">Messages</a>
-                </li>
-              </ul>
+    
+<!-- header section starts  -->
 
-              <form class = "me-2 pt-4 ms-5">
-                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              </form>
+<header class="header">
+   <!-- <img src="image/logo1.png" class="logo"> -->
+    <a href="#" class="logo">  <i class="fa-solid fa-seedling"></i> Plantithumb </a> 
 
+    <div class="icons">
+        <div class="fas fa-bars" id="menu-btn"></div>
+        <div class="fas fa-search" id="search-btn" style="opacity:0.0;"></div>
+        <a href = "{{ url('admin')}}"><div class="fa-solid fa-house-chimney"></div></a>
+        <a href = "{{ url('sales_history')}}"><div class="fa-solid fa-chart-line"></div></a>
+        <a href = "{{ url('contacts')}}"><div class="fas fa-comment-dots"></div></a>
+        <a href="{{ url('orders')}}"> <div  class="fa-solid fa-dolly" id="cart-btn"></div></a>
 
+        <a href = "{{ url('products')}}"><div   class="fa-solid fa-clipboard-list" id="cart-btn" ></div></a>
 
+        <div class="fas fa-user" id="login-btn"></div>
+    </div>
 
-
-              <!-- icons -->
-              <span class="border border-secondary border-3 mx-2 mt-4 rounded icons_buttons">
-                <a href = "{{ url('sales_history')}}"><i class='bx bx-line-chart bx-md px-1 icons' data-bs-toggle="tooltip" data-bs-placement="bottom" title="Sales History"></i></a>
-              </span>
-
-              <span class="border border-secondary border-3 mx-2 mt-4 rounded icons_buttons">
-                <a href = "{{ url('profile')}}"><i class='bx bx-user-circle bx-md px-1 icons' data-bs-toggle="tooltip" data-bs-placement="bottom" title="My Profile"></i></a>
-              </span>
-
-              <span class="border border-secondary border-3 mx-2 mt-4 rounded icons_buttons">
-                <a href = "{{ url('products')}}"><i class='bx bx-package bx-md px-1 icons' data-bs-toggle="tooltip" data-bs-placement="bottom" title="Add / Edit Product"></i></a>
-              </span>
-              
-              <span class="border border-secondary border-3 mx-2 mt-4 rounded icons_buttons">
-                <a href = "{{ url('')}}"><i class='bx bx-log-out bx-md px-1 icons' data-bs-toggle="tooltip" data-bs-placement="bottom" title="Log-Out"></i></a>
-              </span>
+    <form action="" class="search-form">
+        <input type="search" id="search-box" placeholder="search here...">
+        <label for="search-box" class="fas fa-search"></label>
+    </form>
 
 
-
-            </div>
-          </div>
-      </header>
-
-      <br><br>
-
-      <!-- home -->
-      <center>
-      <div class="row align-items-start" style="width: 40rem;">
-        <div class="card col" style = "margin-right: 20px;">
-          <img src="https://i.ibb.co/80Y90SW/image.png" class="card-img-top" alt="...">
+    <form action="" class="login-form">
+        <h3>Account</h3>
         
+        <a href="{{ url('user_profile')}}" class="btnn">Edit Account</a>
+        <a href="{{ url('/logout')}}" class="btnn">Logout</a>
+        <br>
+    </form>
+
+</header>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<p hidden>  
+    @php
+        {{$i = 0;}}
+        @enphp
+    </p>
+
+@foreach ($products as $product)
+<p hidden>  
+
+    {{$i += 1;}}
+</p>
+        @if($i == 1)
+              @if($data->id == $product->seller_id)
+                    @if($products == null)
+                    <h1 class="heading"> My <span>Products</span> </h1>
+                    @endif
+                    @if($products != null)
+                    <h1 class="heading"> My <span>Products</span> </h1>
+                    @endif
+                    
+                  @endif
+              @endif
+        @endforeach
+<!-- products section starts  -->
+<section class="products" id="products">
+
+    <div class="swiper product-slider">
+
+        <div class="swiper-wrapper">
+            @foreach ($products as $product)
+              @if($data->id == $product->seller_id)
+                  <div class="swiper-slide box">
+                      <img src="{{asset('uploads/products/'.$product->image) }} " style="width:300px;">
+                      <h3>{{$product->plant_name}} </h3>
+                      <div class="price"> ₱ {{$product->plant_price}} </div>
+                      <a href="{{ route('details',$product->id) }}" class="btnn" style="margin: 10px;">view</a>
+                  
+                  </div>
+                  @endif
+            @endforeach
         </div>
 
-        <br>
+    </div>
+</section>
 
-        <div class="card col" style = "margin-right: 20px;">
-          <img src="https://i.ibb.co/80Y90SW/image.png" class="card-img-top" alt="...">
+<h1 class="heading"> All <span>Products</span> </h1>
+<!-- products section starts  -->
+<section class="products" id="products">
 
+    <div class="swiper product-slider">
+
+        <div class="swiper-wrapper">
+            @foreach ($products as $product)
+                  <div class="swiper-slide box">
+                      <img src="{{asset('uploads/products/'.$product->image) }} " style="width:300px;"  >
+                      <h3>{{$product->plant_name}} </h3>
+                      <div class="price"> ₱ {{$product->plant_price}} </div>
+                      <a href="{{ route('details',$product->id) }}" class="btnn" style="margin: 10px;">view</a>
+                  
+                  </div>
+            @endforeach
         </div>
 
-        <br>
-        
-        <div class="card col" style = "margin-right: 20px;">
-          <img src="https://i.ibb.co/80Y90SW/image.png" class="card-img-top" alt="...">
+    </div>
 
-        </div>
+</section>
 
-        <br>
-        
-        <div class="card col" style = "margin-right: 20px;">
-          <img src="https://i.ibb.co/80Y90SW/image.png" class="card-img-top" alt="...">
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 
-        </div>
-      </div>
-
-      </center>
-
-      <section class="section">
-        <div class="text_title">Categories</div>
-        <br>
-      </section>
-
-
-      <br><br><br>
-
-      <!-- featured item -->
-      <center>
-          <div class="container">
-
-            <!-- 1ST HORIZONAL SET OF ITEMS -->
-
-            <div class="row align-items-start">
-              <!-- col 1 -->
-              <div class = "col">
-                <div class="card" style="width: 100%;">
-                  <a href = "{{ url('admin/detail1')}}"><img src="https://i.ibb.co/80Y90SW/image.png" id = "myImg" class="card-img-top" alt="..." style = "height: 400px;"></a>
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                
-        
-
-                    {{-- <div id="caption"></div> --}}
-                  </div>
-                </div>
-              </div>
-              
-          
-              <!-- col 2 -->
-              <div class = "col">
-                <div class="card" style="width: 100%;">
-                  <a href = "{{ url('admin/detail2')}}"><img src="https://i.ibb.co/80Y90SW/image.png" id = "myImg" class="card-img-top" alt="..." style = "height: 400px;"></a>
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                
-          
-          
-
-
-                    {{-- <div id="caption2"></div> --}}
-                  </div>
-                </div>
-              </div>
-
-
-
-              <!-- col 3 -->
-              <div class = "col">
-                <div class="card" style="width: 100%;">
-                  <a href = "{{ url('admin/detail3')}}"><img src="https://i.ibb.co/80Y90SW/image.png" id = "myImg" class="card-img-top" alt="..." style = "height: 400px;"></a>
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              
-
-                    {{-- <div id="caption3"></div> --}}
-                  </div>
-                </div>
-              </div>
-      
-      
-            </div>
-
-
-
-            <!-- 2nd HORIZONTAL SET OF ITEMS -->
-
-            <div class="row align-items-start mt-4">
-              <!-- col 1 -->
-              <div class = "col">
-                <div class="card" style="width: 100%;">
-                  <a href = "{{ url('admin/detail4')}}"><img src="https://i.ibb.co/80Y90SW/image.png" id = "myImg" class="card-img-top" alt="..." style = "height: 400px;"></a>
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              
-
-                  </div>
-                </div>
-              </div>
-
-              <!-- col 2 -->
-              <div class = "col">
-
-              </div>
-
-
-              <!-- col 3 -->
-              <div class = "col">
-                
-              </div>
-
-
-
-            </div>
-          </div>
-      </center>
-
-
-
-
-    <!-- javascript -->
-    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
-    <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script> <!-- boxicons -->
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
 
 </body>
 </html>
