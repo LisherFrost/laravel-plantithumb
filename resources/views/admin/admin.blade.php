@@ -29,16 +29,16 @@
     <a href="#" class="logo">  <i class="fa-solid fa-seedling"></i> Plantithumb </a> 
 
     <div class="icons">
-        <div class="fas fa-bars" id="menu-btn"></div>
-        <div class="fas fa-search" id="search-btn" style="opacity:0.0;"></div>
-        <a href = "{{ url('admin')}}"><div class="fa-solid fa-house-chimney"></div></a>
-        <a href = "{{ url('sales_history')}}"><div class="fa-solid fa-chart-line"></div></a>
-        <a href = "{{ url('contacts')}}"><div class="fas fa-comment-dots"></div></a>
-        <a href="{{ url('orders')}}"> <div  class="fa-solid fa-dolly" id="cart-btn"></div></a>
+        <div class="fas fa-bars" id="menu-btn" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Menu"></div>
+        <div class="fas fa-search" id="search-btn" style="opacity:0.0;" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Search"></div>
+        <a href = "{{ url('admin')}}"><div class="fa-solid fa-house-chimney" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Admin"></div></a>
+        <a href = "{{ url('sales_history')}}"><div class="fa-solid fa-chart-line" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Sales History"></div></a>
+        <a href = "{{ url('contacts')}}"><div class="fas fa-comment-dots" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Messages"></div></a>
+        <a href="{{ url('orders')}}"> <div  class="fa-solid fa-dolly" id="cart-btn" data-bs-toggle="tooltip" data-bs-placement="bottom" title="My Orders"></div></a>
 
-        <a href = "{{ url('products')}}"><div   class="fa-solid fa-clipboard-list" id="cart-btn" ></div></a>
+        <a href = "{{ url('products')}}"><div   class="fa-solid fa-clipboard-list" id="cart-btn" data-bs-toggle="tooltip" data-bs-placement="bottom" title="My Products"></div></a>
 
-        <div class="fas fa-user" id="login-btn"></div>
+        <div class="fas fa-user" id="login-btn" data-bs-toggle="tooltip" data-bs-placement="bottom" title="My Profile"></div>
     </div>
 
     <form action="" class="search-form">

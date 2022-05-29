@@ -37,11 +37,11 @@
     </nav>
 
     <div class="icons">
-        <div class="fas fa-bars" id="menu-btn"></div>
-        <a href = "{{ url('admin_login')}}"><div class = "fas fa-user-edit me-5"></div></a>
-        <div class="fas fa-search" id="search-btn"></div>
-        <a href="#"> <div class="fas fa-shopping-cart" id="cart-btn"></div></a>
-        <div class="fas fa-user" id="login-btn"></div>
+        <div class="fas fa-bars" id="menu-btn" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Menu"></div>
+        <a href = "{{ url('admin_login')}}"><div class = "fas fa-user-edit me-5" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Admin"></div></a>
+        <div class="fas fa-search" id="search-btn" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Search"></div>
+        <a href="#"> <div class="fas fa-shopping-cart" id="cart-btn" data-bs-toggle="tooltip" data-bs-placement="bottom" title="My Cart"></div></a>
+        <div class="fas fa-user" id="login-btn" data-bs-toggle="tooltip" data-bs-placement="bottom" title="My Profile"></div>
     </div>
 
     <form action="" class="search-form">

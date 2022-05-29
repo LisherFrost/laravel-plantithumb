@@ -29,14 +29,14 @@
     <a href="#" class="logo">  <i class="fa-solid fa-seedling"></i> Plantithumb </a> 
 
     <div class="icons">
-        <div class="fas fa-bars" id="menu-btn"></div>
+        <div class="fas fa-bars" id="menu-btn" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Menu"></div>
         <div class="fas fa-search" id="search-btn" style="opacity:0.0;"> </div>
-        <a href = "{{ url('admin_login')}}"><div class = "fas fa-user-edit me-5"></div></a>
-        <a href = "{{ url('/session')}}"><div class="fa-solid fa-house-chimney"></div></a>
-        <a href = "{{ url('contacts')}}"><div class="fas fa-comment-dots"></div></a>
-            <a href="{{ url('order_c')}}"> <div  class="fa-solid fa-dolly" id="cart-btn"></div></a>
-        <a href="{{ url('cart')}}"> <div class="fas fa-shopping-cart" id="cart-btn"></div></a>
-        <div class="fas fa-user" id="login-btn"></div>
+        <a href = "{{ url('admin_login')}}"><div class = "fas fa-user-edit me-5" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Admin"></div></a>
+        <a href = "{{ url('/session')}}"><div class="fa-solid fa-house-chimney" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Home"></div></a>
+        <a href = "{{ url('contacts')}}"><div class="fas fa-comment-dots" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Messages"></div></a>
+            <a href="{{ url('order_c')}}"> <div  class="fa-solid fa-dolly" id="cart-btn" data-bs-toggle="tooltip" data-bs-placement="bottom" title="My Orders"></div></a>
+        <a href="{{ url('cart')}}"> <div class="fas fa-shopping-cart" id="cart-btn" data-bs-toggle="tooltip" data-bs-placement="bottom" title="My Cart"></div></a>
+        <div class="fas fa-user" id="login-btn" data-bs-toggle="tooltip" data-bs-placement="bottom" title="My Profile"></div>
     </div>
 
     <form action="" class="search-form">

@@ -267,6 +267,11 @@ a {
     color: var(--black);
 }
 
+.header .login-form img 
+{
+    height: 100px;
+}
+
 .header .login-form .box{
     width: 100%;
     margin:.7rem 0;

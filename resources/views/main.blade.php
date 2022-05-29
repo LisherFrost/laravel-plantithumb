@@ -36,13 +36,13 @@
     </nav>
 
     <div class="icons">
-        <div class="fas fa-bars" id="menu-btn"></div>
-        <div class="fas fa-search" id="search-btn" style="opacity:0.0;"></div>
-        <a href = "{{ url('admin_login')}}"><div class = "fas fa-user-edit me-5"></div></a>
-        <a href = "{{ url('/session')}}"><div class="fa-solid fa-house-chimney"></div></a>
+        <div class="fas fa-bars" id="menu-btn" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Menu"></div>
+        <div class="fas fa-search" id="search-btn" style="opacity:0.0;" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Search"></div>
+        <a href = "{{ url('admin_login')}}"><div class = "fas fa-user-edit me-5" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Admin"></div></a>
+        <a href = "{{ url('/session')}}"><div class="fa-solid fa-house-chimney" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Home"></div></a>
         @if($checkmessage_received != null)
             <a href = "{{ url('contacts')}}">
-                <div  class="fas fa-comment-dots" style="">
+                <div  class="fas fa-comment-dots" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Messages">
                     <p style="margin-top:-50px;margin-right:-25px;font-size:15px;">
                     <i class="fa-solid fa-bell" style="color:red;"></i></p>
                     </div>
@@ -50,12 +50,12 @@
                 
                 @endif
                 @if($checkmessage_received == null)
-                <a href = "{{ url('contacts')}}"><div class="fas fa-comment-dots"></div></a>
+                <a href = "{{ url('contacts')}}"><div class="fas fa-comment-dots" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Messages"></div></a>
                 
                 @endif
-            <a href="{{ url('order_c')}}"> <div  class="fa-solid fa-dolly" id="cart-btn"></div></a>
-        <a href="{{ url('cart')}}"> <div class="fas fa-shopping-cart" id="cart-btn"></div></a>
-        <div class="fas fa-user" id="login-btn"></div>
+            <a href="{{ url('order_c')}}"> <div  class="fa-solid fa-dolly" id="cart-btn" data-bs-toggle="tooltip" data-bs-placement="bottom" title="My Orders"></div></a>
+        <a href="{{ url('cart')}}"> <div class="fas fa-shopping-cart" id="cart-btn" data-bs-toggle="tooltip" data-bs-placement="bottom" title="My Cart"></div></a>
+        <div class="fas fa-user" id="login-btn" data-bs-toggle="tooltip" data-bs-placement="bottom" title="My Profile"></div>
     </div>
 
     <form action="" class="search-form">
