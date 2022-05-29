@@ -82,11 +82,11 @@
                         <form action="{{ route('input.update_profile',$data->id) }}" method="POST" enctype="multipart/form-data">
                         @csrf
                         @method('PATCH')
-                        <div style="width: 75px;float:left;">
-                            <img src="{{asset('uploads/users/'.$data->image) }} " class="card-img-top h-100  border border-3 border-success rounded-circle" alt="Image"><br>
+                        <div style="width: 75px;float:left;" class = "prof_circle">
+                            <img src="{{asset('uploads/users/'.$data->image) }} " class="card-img-top border border-3 border-success rounded-circle" alt="Image"><br>
                         </div>
                             <br>
-                            <button style="padding:4px;border-radius:9px;margin-right:100px;;float:right;">Upload 
+                            <button style="padding:4px; border-radius:9px; margin-top: 20px; margin-right:80px; float: right;">Upload 
                                 <input type="file" name="image" id="image"  style="width:10px;opacity:0.01;">
                             </button>
                             <br>

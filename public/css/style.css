@@ -670,3 +670,10 @@ a {
     }
 
 }
+
+.prof_circle img
+{
+   width: 100px;
+   height: 100px;
+   object-fit: contain;
+}
